@@ -1,211 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Your Name - Senior Digital Marketing Expert</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/30fded7c3c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
+<body class="light-mode">
 
-<body>
-
-    <div id="header">
-        <div class="container">
-            <nav>
-                <h1 class="text1">PS</h1>
-                <ul id="sidemenu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>Front-End Developer</p>
-                <h3>Hi, I'm <span> Puneet </span> <br> Sharma From India</h3>
-            </div>
-        </div>
-    </div>
-    <!----------------about------------------------>
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/user.png" alt="">
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="#" class="logo">Your Logo</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="theme-switcher">
+                <box-icon name='sun' class="sun-icon"></box-icon>
+                <div class="toggle-switch">
+                    <div class="toggle-circle"></div>
                 </div>
-                <div class="about-col-2">
-                    <h1 class="sub">About Me</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
-                        dolorem! Eaque adipisci harum cupiditate quis perspiciatis vitae
-                        saepe repellat distinctio, ipsam vel molestias. Porro quia fugit omnis,
-                        aspernatur ab iusto. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Eligendi magni ipsam iusto eos culpa fugiat itaque quos reiciendis optio facilis sequi
-                        asperiores sapiente, dolores nulla fugit autem deserunt dignissimos soluta.</p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experince')">Experince</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                <box-icon name='moon' class="moon-icon"></box-icon>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-headline">Driving Measurable Growth Through Digital Strategy</h1>
+                <p class="hero-subheadline">Specializing in data-driven SEO, SEM, and Content Marketing to elevate brands.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="cta-primary">Let's Connect</a>
+                    <a href="/path-to-your/cv.pdf" class="cta-secondary" download>Download CV</a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="https://via.placeholder.com/400" alt="Professional Headshot" class="hero-headshot">
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <div class="about-bio">
+                    <p>I am a passionate and results-oriented digital marketing strategist with a proven track record of developing and executing successful online marketing campaigns. My philosophy is simple: understand the data, know the audience, and create strategies that deliver not just clicks, but real business outcomes.</p>
+                </div>
+                <div class="about-achievements">
+                    <div class="achievement">
+                        <span class="achievement-number" data-target="10">0</span>+
+                        <span class="achievement-label">Years of Experience</span>
                     </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-
-                            <li> <span>Web Developer</span> <br>Web App Development </li>
-                            <li> <span>App Developer</span> <br> Building Android/ios apps </li>
-                        </ul>
+                    <div class="achievement">
+                        <span class="achievement-number" data-target="50">0</span>+
+                        <span class="achievement-label">Clients Empowered</span>
                     </div>
-                    <div class="tab-contents" id="experince">
-                        <ul>
-                            <li> <span>2022</span> <br> I complete my 28day industrial training in php at chandigarh.
-                            </li>
-
-
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li> <span>Currently</span> <br>NOw i am persuing my 3 year diploma in govt. polytecnic
-                                hamirpur </li>
-                            <li> <span>2020</span> <br> In 2020 i'm completed my 10th </li>
-
-                        </ul>
+                    <div class="achievement">
+                        <span class="achievement-number" data-target="10">0</span>M+
+                        <span class="achievement-label">In Ad Spend Managed</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!----------------services------------------------>
-    <div id="services">
-        <div class="container">
-            <h1 class="sub">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi dolorum hic rerum fuga dicta
-                        voluptates repudiandae fugiat consectetur. Ex, et libero.</p>
-                    <a href="#">Learn More</a>
+        </section>
+
+        <section id="services" class="services-section">
+            <h2>Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <box-icon name='search-alt' color='var(--accent-color)' size='lg'></box-icon>
+                    <h3>SEO</h3>
+                    <p>Boosting organic visibility through technical SEO, keyword strategy, and quality link building.</p>
                 </div>
-                <div>
-                    <i class="fa-solid fa-crop-simple"></i>
-                    <h2>UI/Ux Design</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi dolorum hic rerum fuga dicta
-                        voluptates repudiandae fugiat consectetur. Ex, et libero.</p>
-                    <a href="#">Learn More</a>
+                <div class="service-card">
+                    <box-icon name='bullseye' color='var(--accent-color)' size='lg'></box-icon>
+                    <h3>PPC & SEM</h3>
+                    <p>Maximizing ROI with targeted Google Ads and paid social campaigns.</p>
                 </div>
-                <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>App Design</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi dolorum hic rerum fuga dicta
-                        voluptates repudiandae fugiat consectetur. Ex, et libero.</p>
-                    <a href="#">Learn More</a>
+                <div class="service-card">
+                    <box-icon name='envelope' color='var(--accent-color)' size='lg'></box-icon>
+                    <h3>Email Marketing</h3>
+                    <p>Nurturing leads and driving conversions with automated email workflows.</p>
+                </div>
+                <div class="service-card">
+                    <box-icon name='line-chart' color='var(--accent-color)' size='lg'></box-icon>
+                    <h3>Data Analytics</h3>
+                    <p>Turning raw data into actionable insights for strategic decision-making.</p>
                 </div>
             </div>
-        </div>
-    </div>
-    <!------------Portfolio-------------->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/work-1.png" alt="">
-                    <div class="layer">
-                        <h3>Social Media</h3>
-                        <p>The app connects you to the talented people around the world.
-                            Download it from play store.
-                        </p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+        </section>
+
+        <section id="portfolio" class="portfolio-section">
+            <h2>Case Studies</h2>
+            <div class="portfolio-grid">
+                <div class="case-study-card">
+                    <img src="https://via.placeholder.com/600x400/0A192F/CCD6F6?text=Client+Project" alt="Client Project Screenshot" class="case-study-image">
+                    <div class="case-study-overlay">
+                        <img src="https://via.placeholder.com/150x50/FFFFFF/0A192F?text=Client+Logo" alt="Client Logo" class="client-logo">
+                        <h3>E-commerce Sales Growth</h3>
+                        <p class="case-study-metrics">+250% Organic Traffic | +120% Conversion Rate</p>
+                        <a href="#" class="cta-tertiary">View Details</a>
                     </div>
                 </div>
-                <div class="work">
-                    <img src="images/work-2.png" alt="">
-                    <div class="layer">
-                        <h3> Music App</h3>
-                        <p>The app connects you to the talented people around the world.
-                            Download it from play store.
-                        </p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/work-3.png" alt="">
-                    <div class="layer">
-                        <h3>Online Shopping App</h3>
-                        <p>The app connects you to the talented people around the world.
-                            Download it from play store.
-                        </p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                 <div class="case-study-card">
+                    <img src="https://via.placeholder.com/600x400/0A192F/CCD6F6?text=Client+Project" alt="Client Project Screenshot" class="case-study-image">
+                    <div class="case-study-overlay">
+                        <img src="https://via.placeholder.com/150x50/FFFFFF/0A192F?text=Client+Logo" alt="Client Logo" class="client-logo">
+                        <h3>SaaS Lead Generation</h3>
+                        <p class="case-study-metrics">-30% Cost-Per-Acquisition | +150% MQLs</p>
+                        <a href="#" class="cta-tertiary">View Details</a>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See More</a>
-        </div>
-    </div>
-    <!--------contact---------->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h2 class="sub">Contact Me</h2>
-                    <p><i class="fas fa-paper-plane"></i>contact@example.complete</p>
-                    <p><i class="fas fa-phone-square-alt"></i>0123456789</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter-square"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <h2>Certifications & Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item" title="Google Ads Search Certified"><img src="https://via.placeholder.com/100/CCD6F6/0A192F?text=Google+Ads" alt="Google Ads"></div>
+                <div class="skill-item" title="HubSpot Content Marketing Certified"><img src="https://via.placeholder.com/100/CCD6F6/0A192F?text=HubSpot" alt="HubSpot"></div>
+                <div class="skill-item" title="Meta Blueprint Certified"><img src="https://via.placeholder.com/100/CCD6F6/0A192F?text=Meta" alt="Meta Blueprint"></div>
+                <div class="skill-item" title="Google Analytics IQ"><img src="https://via.placeholder.com/100/CCD6F6/0A192F?text=Analytics" alt="Google Analytics"></div>
+                 <div class="skill-item" title="Semrush Certified"><img src="https://via.placeholder.com/100/CCD6F6/0A192F?text=Semrush" alt="Semrush"></div>
+                <div class="skill-item" title="Ahrefs Proficient"><img src="https://via.placeholder.com/100/CCD6F6/0A192F?text=Ahrefs" alt="Ahrefs"></div>
+            </div>
+        </section>
+
+        <section id="blog" class="blog-section">
+            <h2>Insights</h2>
+            <div class="blog-grid">
+                <article class="blog-post-card">
+                    <img src="https://via.placeholder.com/400x250/0A192F/CCD6F6?text=Blog+Image" alt="Blog Post" class="blog-post-image">
+                    <div class="blog-post-content">
+                        <span class="blog-category">SEO</span>
+                        <h3>The Future of AI in Search Engine Optimization</h3>
+                        <p>Exploring how machine learning is reshaping keyword research and content strategy...</p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
                     </div>
-                    <a href="images/my-cv.pdf" download class="btn btn2">Download Resume</a>
-                </div>
-                <div class="contact-right">
-                    <form>
-                        <input type="text" name="Name" placeholder="Yourname" required>
-                        <input type="email" name="Email" placeholder="Youremail" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
+                </article>
+                 <article class="blog-post-card">
+                    <img src="https://via.placeholder.com/400x250/0A192F/CCD6F6?text=Blog+Image" alt="Blog Post" class="blog-post-image">
+                    <div class="blog-post-content">
+                        <span class="blog-category">Content Marketing</span>
+                        <h3>Creating Content That Converts: A 5-Step Guide</h3>
+                        <p>Move beyond vanity metrics and create content that directly impacts your bottom line...</p>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Let's Build Something Great Together</h2>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                    <button type="submit" class="cta-primary">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <p>Or connect with me through other channels:</p>
+                    <div class="social-links">
+                        <a href="#"><box-icon type='logo' name='linkedin-square' color='var(--text-color)'></box-icon></a>
+                        <a href="#"><box-icon type='logo' name='twitter' color='var(--text-color)'></box-icon></a>
+                        <a href="#"><box-icon name='calendar' color='var(--text-color)'></box-icon></a>
+                    </div>
+                     <div class="newsletter">
+                        <label for="newsletter-opt-in">Stay updated with my latest insights:</label>
+                        <div class="newsletter-input">
+                            <input type="email" id="newsletter-opt-in" placeholder="your.email@example.com">
+                            <button type="button">Subscribe</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div> 
-        <div class="copyright">
-            <p>Copyright PS. It is developed by Lord Puneet</p>
-        </div>
-    </div>
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links")
-        var tabcontents = document.getElementsByClassName("tab-contents")
+        </section>
+    </main>
 
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab")
-        }
-    </script>
+    <footer class="main-footer">
+        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+    </footer>
 
-    <script>
-
-        var sidemenu = document.getElementById("sidemenu");
-
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
