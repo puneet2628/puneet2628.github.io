@@ -1,4 +1,4 @@
-# Alex Morgan — Cloud & DevOps Engineer Portfolio
+# Puneet Sharma — Cloud & DevOps Engineer Portfolio
 
 A responsive React + TypeScript + Vite portfolio concept based on the supplied brief.
 
@@ -18,7 +18,7 @@ A responsive React + TypeScript + Vite portfolio concept based on the supplied b
 - SEO metadata, reduced-motion support and accessible labels
 
 ## Important demo-data notice
-Alex Morgan, London location, employment history, education, certification placeholders, testimonials, contact details, project descriptions and metrics are fictional demonstration content. Project concepts are not verified production deployments. The social links are placeholders. No real GitHub repositories, live demos, resume file, backend, or email delivery integration is included. Replace all demo content before publishing.
+Puneet Sharma, London location, employment history, education, certification placeholders, testimonials, contact details, project descriptions and metrics are fictional demonstration content. Project concepts are not verified production deployments. The social links are placeholders. No real GitHub repositories, live demos, resume file, backend, or email delivery integration is included. Replace all demo content before publishing.
 
 ## Customisation
 - Project case studies and skills: `src/data.ts`
