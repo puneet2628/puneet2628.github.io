@@ -1,0 +1,3641 @@
+[
+  {
+    "id": "python",
+    "title": "Python for Cloud Engineering",
+    "short": "Automation · APIs · SDKs · SRE tooling",
+    "area": "Engineering foundations",
+    "level": "Core → Advanced",
+    "time": "10–14 weeks",
+    "description": "Build production-grade automation, services and operational tooling with Python. The source roadmap recommends Python as the primary language for cloud automation and SRE.",
+    "outcome": "Ship tested CLIs and cloud automation that are typed, observable, secure and safe to retry.",
+    "stages": [
+      {
+        "title": "P1 · Programming foundations",
+        "focus": "Learn the language before relying on frameworks.",
+        "modules": [
+          {
+            "title": "Syntax, values & control flow",
+            "description": "Understand the building blocks and their behavior.",
+            "topics": [
+              "Variables, constants and naming",
+              "Integers, floats, strings and booleans",
+              "Type conversion and truthiness",
+              "Operators and expression evaluation",
+              "Input and output",
+              "if / elif / else branching",
+              "for and while loops",
+              "break, continue and pass",
+              "String formatting and manipulation"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Functions & composition",
+            "description": "Turn repeated logic into small, testable units.",
+            "topics": [
+              "Function definitions and return values",
+              "Positional, keyword and default arguments",
+              "*args and **kwargs",
+              "Scope, namespaces and closures",
+              "Lambda functions",
+              "Recursion and base cases",
+              "Pure functions and side effects",
+              "Docstrings and function contracts"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Core collections & iteration",
+            "description": "Choose the right data structure for each operation.",
+            "topics": [
+              "Lists, tuples, sets and dictionaries",
+              "Indexing, slicing and unpacking",
+              "Comprehensions",
+              "Nested collections",
+              "Enumerate and zip",
+              "Iterables and iterators",
+              "Generators and yield",
+              "Sorting with keys",
+              "Membership and lookup complexity"
+            ],
+            "lab": "Build a CLI that reads a large JSONL file and produces grouped summaries without loading the entire file.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "P2 · Intermediate Python",
+        "focus": "Move from scripts to maintainable application code.",
+        "modules": [
+          {
+            "title": "Modules, packages & environments",
+            "description": "Structure code and make dependencies reproducible.",
+            "topics": [
+              "Imports and module resolution",
+              "Packages and __init__.py",
+              "Virtual environments",
+              "pip and dependency pinning",
+              "pyproject.toml",
+              "Application configuration",
+              "Environment variables",
+              "Packaging and distribution"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Files, data & errors",
+            "description": "Build robust boundaries around external input.",
+            "topics": [
+              "File paths and pathlib",
+              "Text and binary file handling",
+              "CSV and JSON",
+              "YAML processing",
+              "Regular expressions",
+              "Exception hierarchy",
+              "Custom exceptions",
+              "Retryable versus permanent errors",
+              "Safe temporary files and atomic writes"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Object-oriented Python",
+            "description": "Model domain behavior without overengineering.",
+            "topics": [
+              "Classes and objects",
+              "Constructors and instance state",
+              "Encapsulation and properties",
+              "Inheritance and composition",
+              "Polymorphism and abstraction",
+              "Static and class methods",
+              "Magic methods and protocols",
+              "Dataclasses",
+              "__slots__ and object footprint"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Typing & code contracts",
+            "description": "Make large automation codebases easier to refactor.",
+            "topics": [
+              "Type hints and annotations",
+              "Optional and union types",
+              "Generic types",
+              "Protocols and structural typing",
+              "TypedDict and dataclasses",
+              "mypy or pyright",
+              "Pydantic v2 validation",
+              "Validation at API and config boundaries"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "P3 · Advanced runtime & concurrency",
+        "focus": "Understand runtime costs, concurrency and performance.",
+        "modules": [
+          {
+            "title": "Memory & object lifecycle",
+            "description": "Diagnose memory pressure instead of guessing.",
+            "topics": [
+              "Reference counting",
+              "Generational garbage collection",
+              "Shallow versus deep copy",
+              "Weak references",
+              "Memory profiling",
+              "Object lifetime and reference cycles",
+              "Generators for bounded-memory processing",
+              "gc module and leak diagnosis"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Concurrency & parallelism",
+            "description": "Select the right execution model for the workload.",
+            "topics": [
+              "GIL concepts and free-threaded Python overview",
+              "Threading and ThreadPoolExecutor",
+              "Multiprocessing and ProcessPoolExecutor",
+              "asyncio event loop",
+              "Coroutines and async / await",
+              "Tasks, futures and cancellation",
+              "Locks, semaphores and queues",
+              "Thread safety and race conditions",
+              "I/O-bound versus CPU-bound work"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Quality, testing & observability",
+            "description": "Treat automation as production software.",
+            "topics": [
+              "pytest fixtures and parametrization",
+              "Unit and integration testing",
+              "Mocking cloud SDK calls",
+              "Testcontainers concepts",
+              "Coverage and meaningful assertions",
+              "Structured logging",
+              "Metrics and tracing basics",
+              "Ruff, Black and linting",
+              "Profiling CPU and memory",
+              "Dependency and supply-chain security"
+            ],
+            "lab": "Publish a Python package with typed interfaces, 85%+ meaningful test coverage, structured logs and CI checks.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "P4 · Cloud SDKs & production automation",
+        "focus": "Connect Python to cloud control planes and real operations.",
+        "modules": [
+          {
+            "title": "Cloud SDK foundations",
+            "description": "Use provider SDKs safely and efficiently.",
+            "topics": [
+              "Boto3 clients versus resources",
+              "Botocore configuration and connection pools",
+              "Retries, jitter and adaptive backoff",
+              "Paginators and waiters",
+              "SDK event hooks",
+              "Google Cloud Python client libraries",
+              "Azure SDK pipeline and azure-core",
+              "DefaultAzureCredential and async clients",
+              "Credential chains and workload identity"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "APIs, identity & resilient clients",
+            "description": "Build dependable integrations with external systems.",
+            "topics": [
+              "HTTP methods, status codes and headers",
+              "REST API clients and timeouts",
+              "OAuth 2.0 and JWT concepts",
+              "Authentication versus authorization",
+              "Pagination and cursor handling",
+              "Exponential backoff with jitter",
+              "Rate limiting and token buckets",
+              "Idempotency keys",
+              "Webhooks and signature validation",
+              "Secrets and certificate handling"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "CLIs, services & automation",
+            "description": "Package repeatable operations as tools.",
+            "topics": [
+              "argparse, Click or Typer",
+              "FastAPI service patterns",
+              "Configuration and secret injection",
+              "SSH and Linux process automation",
+              "Log parsing and enrichment",
+              "Cloud resource inventory",
+              "Automated backup verification",
+              "Cost reporting and idle-resource detection",
+              "Audit and policy checks",
+              "Safe dry-run and approval modes"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Advanced production builds",
+            "description": "Demonstrate end-to-end engineering ownership.",
+            "topics": [
+              "Drift-detection CLI and service",
+              "Terraform state inventory from S3, GCS or Blob",
+              "Live-versus-declared configuration diffing",
+              "API throttling protection",
+              "Structured remediation diffs",
+              "Slack or PagerDuty alert integration",
+              "Async resource discovery",
+              "Cloud SDK contract tests"
+            ],
+            "lab": "Build the drift-detection CLI/microservice from the source blueprint, including rate limiting, deep diffs, retries and alert payloads.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "javascript",
+    "title": "JavaScript & TypeScript Engineering",
+    "short": "Node.js · APIs · tooling · internal platforms",
+    "area": "Engineering foundations",
+    "level": "Core → Advanced",
+    "time": "8–12 weeks",
+    "description": "Use JavaScript and TypeScript to build backend services, real-time gateways, internal portals and deployment dashboards. Python remains the first-priority automation language.",
+    "outcome": "Build typed Node.js services with reliable async behavior, tests, security and backpressure-aware streams.",
+    "stages": [
+      {
+        "title": "JS1 · JavaScript fundamentals",
+        "focus": "Become fluent with the language and its data model.",
+        "modules": [
+          {
+            "title": "Language essentials",
+            "description": "Understand JavaScript values and execution.",
+            "topics": [
+              "var, let and const",
+              "Primitive and reference values",
+              "Operators and coercion",
+              "Conditionals and loops",
+              "Functions and arrow functions",
+              "Scope and hoisting",
+              "Closures",
+              "this keyword",
+              "Arrays and objects"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Data transformation & modules",
+            "description": "Write expressive and composable application code.",
+            "topics": [
+              "Destructuring",
+              "Spread and rest operators",
+              "Template literals",
+              "map, filter and reduce",
+              "find, some and every",
+              "Set and Map",
+              "Optional chaining and nullish coalescing",
+              "Error handling",
+              "ES modules and imports",
+              "Functional programming foundations"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "JS2 · Runtime & asynchronous systems",
+        "focus": "Understand Node.js and browser runtime behavior.",
+        "modules": [
+          {
+            "title": "Execution model",
+            "description": "Know what runs now, next and concurrently.",
+            "topics": [
+              "Execution contexts and call stack",
+              "Event loop phases",
+              "Microtask and macrotask queues",
+              "Promise resolution",
+              "Promise chaining and combinators",
+              "async / await",
+              "process.nextTick and setImmediate",
+              "Unhandled rejection handling",
+              "Timers and cancellation"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Node runtime internals",
+            "description": "Diagnose memory, CPU and I/O behavior.",
+            "topics": [
+              "V8 engine overview",
+              "libuv and thread pool",
+              "UV_THREADPOOL_SIZE concepts",
+              "Worker Threads for CPU-bound tasks",
+              "Heap spaces and garbage collection",
+              "Heap snapshots and memory leaks",
+              "Streams: Readable, Writable and Transform",
+              "pipeline and backpressure",
+              "highWaterMark tuning"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Network and realtime primitives",
+            "description": "Build services that behave well under load.",
+            "topics": [
+              "Fetch API and HTTP clients",
+              "WebSocket lifecycle",
+              "Heartbeat ping/pong",
+              "Connection lifecycle and cleanup",
+              "Buffered output and backpressure",
+              "Retry and timeout policy",
+              "Graceful shutdown",
+              "Clustering and horizontal scaling"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "JS3 · TypeScript",
+        "focus": "Make application boundaries explicit and maintainable.",
+        "modules": [
+          {
+            "title": "Type system fundamentals",
+            "description": "Model safe APIs and state.",
+            "topics": [
+              "Type inference and annotations",
+              "Interfaces and type aliases",
+              "Union and intersection types",
+              "Literal types",
+              "Type narrowing and guards",
+              "Discriminated unions",
+              "Enums and alternatives",
+              "Utility types",
+              "Declaration files"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Advanced TypeScript",
+            "description": "Use the type system for reusable platform code.",
+            "topics": [
+              "Generics and constraints",
+              "Conditional types",
+              "Mapped types",
+              "infer keyword",
+              "Template literal types",
+              "Function overloads",
+              "Strict mode",
+              "strictNullChecks",
+              "noUncheckedIndexedAccess",
+              "tsconfig project references"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Tooling & testing",
+            "description": "Integrate type safety into delivery.",
+            "topics": [
+              "Node.js TypeScript project setup",
+              "ESLint and formatting",
+              "Jest or Vitest",
+              "Mocking HTTP and SDK clients",
+              "Contract tests",
+              "Build output and source maps",
+              "Dependency auditing",
+              "CI type-check gates"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "JS4 · Backend & platform products",
+        "focus": "Build practical services and engineering interfaces.",
+        "modules": [
+          {
+            "title": "Node.js backend engineering",
+            "description": "Create APIs that are secure and operable.",
+            "topics": [
+              "Node.js architecture",
+              "npm and lockfiles",
+              "Express or NestJS",
+              "REST API design",
+              "Middleware and validation",
+              "GraphQL fundamentals",
+              "Authentication and authorization",
+              "OAuth 2.0 and JWT",
+              "API rate limiting",
+              "Error mapping and versioning"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Data, messaging & operations",
+            "description": "Connect services to state and asynchronous work.",
+            "topics": [
+              "PostgreSQL drivers and ORM concepts",
+              "Redis caching and sessions",
+              "Background jobs and queues",
+              "WebSockets and event streaming",
+              "Idempotent handlers",
+              "Structured logs and trace context",
+              "Integration testing",
+              "Dockerization and deployment"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Production project",
+            "description": "Build the real-time gateway from the advanced blueprint.",
+            "topics": [
+              "TypeScript WebSocket gateway",
+              "JWT authentication at upgrade",
+              "Redis Pub/Sub and Streams",
+              "Heartbeat and zombie connection cleanup",
+              "Per-connection backpressure policy",
+              "Prometheus metrics endpoint",
+              "Active connections and latency histograms",
+              "Horizontal scaling across stateless pods"
+            ],
+            "lab": "Deliver a real-time event gateway with load tests, graceful shutdown, metrics and a failure-mode guide.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "linux",
+    "title": "Linux & Operating Systems",
+    "short": "Processes · kernel · filesystems · containers",
+    "area": "Systems foundations",
+    "level": "Core → Expert",
+    "time": "8–10 weeks",
+    "description": "Cloud platforms run on operating systems. Learn to administer, inspect and troubleshoot Linux below the cloud console abstraction.",
+    "outcome": "Diagnose CPU, memory, process, filesystem and kernel-level failures from evidence.",
+    "stages": [
+      {
+        "title": "L1 · Linux fundamentals",
+        "focus": "Become comfortable operating a real server.",
+        "modules": [
+          {
+            "title": "Shell & filesystem",
+            "description": "Navigate Linux and automate routine work.",
+            "topics": [
+              "Ubuntu, Debian, RHEL and Amazon Linux",
+              "Filesystem hierarchy",
+              "Absolute and relative paths",
+              "File and directory operations",
+              "Pipes and redirection",
+              "Environment variables",
+              "Shell startup and profiles",
+              "Package managers",
+              "Bash scripting fundamentals"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Users, permissions & access",
+            "description": "Apply least privilege at OS level.",
+            "topics": [
+              "Users and groups",
+              "rwx permissions and umask",
+              "Ownership and group ownership",
+              "SUID, SGID and sticky bit",
+              "ACLs with getfacl and setfacl",
+              "sudo policy",
+              "SSH keys and agent",
+              "SCP and SFTP",
+              "Linux capabilities overview"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Services & scheduling",
+            "description": "Make applications survive reboots and routine operations.",
+            "topics": [
+              "systemd units",
+              "Service dependencies and restart policy",
+              "journald",
+              "Cron and timers",
+              "Log rotation",
+              "Process signals",
+              "Graceful shutdown handling",
+              "SCP/SFTP and secure file transfer"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "L2 · Administration & troubleshooting",
+        "focus": "Find the source of performance and availability problems.",
+        "modules": [
+          {
+            "title": "Processes, CPU & memory",
+            "description": "Inspect resource use and kernel behavior.",
+            "topics": [
+              "Processes versus threads",
+              "ps, top and htop",
+              "Signals: SIGTERM, SIGKILL and SIGHUP",
+              "CPU utilization and load average",
+              "Virtual memory and swap",
+              "OOM killer behavior",
+              "/proc and /sys",
+              "strace basics",
+              "Performance troubleshooting workflow"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Storage & filesystems",
+            "description": "Understand persistence and I/O bottlenecks.",
+            "topics": [
+              "Block devices and partitions",
+              "Filesystems and mounting",
+              "LVM concepts",
+              "RAID concepts",
+              "Disk I/O metrics",
+              "inode and file descriptor limits",
+              "du, df, lsblk and iostat",
+              "Backup and restore",
+              "Filesystem permissions and ACLs"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Network & host security",
+            "description": "Troubleshoot the host boundary.",
+            "topics": [
+              "ip and route",
+              "ss and socket inspection",
+              "dig, host and resolv.conf",
+              "curl and openssl",
+              "nftables and iptables concepts",
+              "SELinux and AppArmor",
+              "auditd and kernel logs",
+              "limits.conf and nofile",
+              "Host hardening checklist"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "L3 · Kernel & isolation",
+        "focus": "Understand the primitives behind containers and cloud hosts.",
+        "modules": [
+          {
+            "title": "Kernel architecture",
+            "description": "Learn the user/kernel boundary.",
+            "topics": [
+              "Kernel versus userspace",
+              "System calls",
+              "Boot process and init",
+              "Kernel modules",
+              "Schedulers and scheduling classes",
+              "I/O scheduling",
+              "Memory allocation concepts",
+              "Kernel logs and crash evidence"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Container primitives",
+            "description": "Connect container behavior to Linux isolation.",
+            "topics": [
+              "Namespaces: pid, net, mnt, ipc, uts and user",
+              "cgroups v1 versus v2",
+              "CPU quota and weight",
+              "memory.max and OOM behavior",
+              "Linux capabilities",
+              "Rootless container concepts",
+              "Overlay filesystems",
+              "Unix domain sockets and IPC"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Advanced diagnostics",
+            "description": "Use observability at the kernel boundary.",
+            "topics": [
+              "eBPF concepts",
+              "kprobes and tracepoints",
+              "XDP and traffic inspection",
+              "bpftrace and BCC overview",
+              "execsnoop and tcplife concepts",
+              "biolatency and disk tracing",
+              "perf basics",
+              "Flame graphs and profiling"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "L4 · Shell engineering lab",
+        "focus": "Automate operations with production-safe shell practices.",
+        "modules": [
+          {
+            "title": "Production Bash",
+            "description": "Write scripts that fail safely and predictably.",
+            "topics": [
+              "set -euo pipefail",
+              "IFS and safe word splitting",
+              "trap cleanup EXIT ERR INT TERM",
+              "flock for mutual exclusion",
+              "awk, sed and jq",
+              "xargs -P and bounded parallelism",
+              "Exit codes and error handling",
+              "Idempotent scripts",
+              "Dry-run modes and audit logging"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Host operations projects",
+            "description": "Prove your skills on a real Linux VM.",
+            "topics": [
+              "Build a hardened Linux host",
+              "Configure SSH and firewall policy",
+              "Deploy systemd-managed application",
+              "Automated backup and restore test",
+              "CPU / RAM / disk health CLI",
+              "Reverse proxy deployment",
+              "Diagnose file descriptor exhaustion",
+              "Write a host troubleshooting runbook"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "networking",
+    "title": "Computer & Enterprise Networking",
+    "short": "TCP/IP · routing · DNS · hybrid cloud",
+    "area": "Systems foundations",
+    "level": "Core → Expert",
+    "time": "8–12 weeks",
+    "description": "Networking is a core differentiator for senior cloud engineers. Learn packet flow, address design, routing, TLS, load balancing and hybrid connectivity.",
+    "outcome": "Trace a request end to end and design secure, non-overlapping, resilient networks.",
+    "stages": [
+      {
+        "title": "N1 · Fundamentals & addressing",
+        "focus": "Build a precise mental model of packet delivery.",
+        "modules": [
+          {
+            "title": "Network building blocks",
+            "description": "Understand the pieces and boundaries.",
+            "topics": [
+              "LAN, WAN and MAN",
+              "Switches, routers and firewalls",
+              "MAC addresses and ARP",
+              "IPv4 and IPv6",
+              "Binary conversion",
+              "Subnet masks and CIDR",
+              "Public versus private IP ranges",
+              "Default gateways",
+              "NAT and PAT",
+              "ICMP and traceroute"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Subnetting & IP planning",
+            "description": "Plan networks without collisions or surprises.",
+            "topics": [
+              "CIDR calculations",
+              "Subnet sizing and usable addresses",
+              "RFC 1918 address planning",
+              "VPC/VNet address allocation",
+              "Public, private and isolated subnets",
+              "Availability-zone subnet strategy",
+              "Pod and service CIDR planning",
+              "IP exhaustion management"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "N2 · Protocols & transport",
+        "focus": "Understand what happens between the client and service.",
+        "modules": [
+          {
+            "title": "OSI and TCP/IP",
+            "description": "Map protocols to layers and troubleshooting tools.",
+            "topics": [
+              "OSI model and TCP/IP model",
+              "Ethernet framing",
+              "IPv4/IPv6 headers and TTL",
+              "TCP three-way handshake",
+              "TCP teardown and TIME_WAIT",
+              "UDP datagrams",
+              "Congestion control concepts: BBR and CUBIC",
+              "MTU and Path MTU Discovery",
+              "Packet loss, jitter and retransmission"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "DNS, HTTP & application protocols",
+            "description": "Understand application-level behavior.",
+            "topics": [
+              "DNS records A, AAAA, CNAME, MX and TXT",
+              "Recursive resolution and caching",
+              "TTL strategy and DNSSEC",
+              "HTTP methods, status codes and caching",
+              "TLS and HTTPS",
+              "SSH, SFTP and NTP",
+              "WebSockets",
+              "gRPC and Protocol Buffers",
+              "HTTP/2 multiplexing",
+              "HTTP/3 and QUIC"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "TLS and service identity",
+            "description": "Secure connections between people, apps and services.",
+            "topics": [
+              "TLS 1.2 versus TLS 1.3",
+              "Certificate chains and trust stores",
+              "ECDHE and forward secrecy",
+              "SNI routing",
+              "Session resumption and 0-RTT caveats",
+              "Mutual TLS",
+              "X.509 identities",
+              "SPIFFE and SPIRE concepts",
+              "Certificate rotation"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "N3 · Routing & traffic management",
+        "focus": "Design networks that can grow and recover.",
+        "modules": [
+          {
+            "title": "Routing protocols",
+            "description": "Understand route selection and convergence.",
+            "topics": [
+              "Static and dynamic routing",
+              "OSPF fundamentals",
+              "BGP eBGP and iBGP",
+              "ASNs and route advertisements",
+              "AS-path and MED concepts",
+              "BFD failure detection",
+              "Route propagation",
+              "Hybrid cloud route exchange"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "VPN and private connectivity",
+            "description": "Connect private environments across boundaries.",
+            "topics": [
+              "Site-to-site VPN",
+              "Client VPN",
+              "IPsec and tunnel concepts",
+              "Direct Connect",
+              "ExpressRoute",
+              "Cloud Interconnect",
+              "Transit Gateway and Virtual WAN",
+              "PrivateLink and private service endpoints",
+              "Network segmentation"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Load balancing & edge",
+            "description": "Choose traffic distribution at the right layer.",
+            "topics": [
+              "L4 versus L7 load balancing",
+              "TCP/UDP 5-tuple",
+              "TLS termination",
+              "Host and path routing",
+              "Reverse proxies: NGINX and Envoy",
+              "WAF integration",
+              "WebSocket and gRPC routing",
+              "CDN and edge caching",
+              "Anycast and global traffic management",
+              "Health checks and failover"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "N4 · Enterprise & Kubernetes networking",
+        "focus": "Reason about east-west, north-south and cross-region traffic.",
+        "modules": [
+          {
+            "title": "Enterprise network architectures",
+            "description": "Build secure, scalable topologies.",
+            "topics": [
+              "Hub-and-spoke architecture",
+              "Transit networking",
+              "Central egress and inspection",
+              "Multi-region topology",
+              "Overlapping CIDR resolution",
+              "Split-horizon DNS",
+              "Private hosted zones",
+              "Hybrid identity and name resolution",
+              "DDoS protection",
+              "Network observability"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Kubernetes network behavior",
+            "description": "Trace traffic through a cluster.",
+            "topics": [
+              "Pod and service networking",
+              "CNI architecture",
+              "kube-proxy concepts",
+              "NetworkPolicy and default deny",
+              "Ingress and Gateway API",
+              "Service mesh data plane",
+              "Cilium and eBPF concepts",
+              "CoreDNS and NodeLocal DNSCache",
+              "Conntrack and ephemeral port pressure",
+              "Packet capture with Wireshark and tcpdump"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Network engineering labs",
+            "description": "Verify your designs with packet-level evidence.",
+            "topics": [
+              "Design 3-AZ VPC/VNet",
+              "Configure routes, NAT and firewall rules",
+              "Build a site-to-site VPN lab",
+              "Capture and explain a TCP handshake",
+              "Diagnose DNS and TLS failures",
+              "Design hub-and-spoke connectivity",
+              "Create a multi-region network diagram",
+              "Write a network troubleshooting runbook"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "databases",
+    "title": "SQL, NoSQL & Database Engineering",
+    "short": "PostgreSQL · Redis · distributed data",
+    "area": "Data foundations",
+    "level": "Core → Expert",
+    "time": "10–14 weeks",
+    "description": "Learn data modeling, SQL, administration, query plans, replication and distributed database trade-offs. Start with PostgreSQL before expanding to managed and NoSQL systems.",
+    "outcome": "Design and operate data stores with predictable consistency, performance, recovery and tenant isolation.",
+    "stages": [
+      {
+        "title": "DB1 · SQL & relational modeling",
+        "focus": "Write correct queries and design useful schemas.",
+        "modules": [
+          {
+            "title": "Relational fundamentals",
+            "description": "Understand relational data and constraints.",
+            "topics": [
+              "Tables, rows and columns",
+              "Data types and null semantics",
+              "Primary and foreign keys",
+              "Unique, check and not-null constraints",
+              "Normalization and denormalization",
+              "ER diagrams and cardinality",
+              "One-to-one, one-to-many and many-to-many",
+              "Schema naming and migrations"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "SQL querying",
+            "description": "Retrieve and transform data confidently.",
+            "topics": [
+              "SELECT, INSERT, UPDATE and DELETE",
+              "WHERE, ORDER BY and LIMIT",
+              "GROUP BY and HAVING",
+              "DISTINCT and aggregate functions",
+              "NULL handling and CASE",
+              "String and date functions",
+              "INNER, LEFT, RIGHT and FULL joins",
+              "Self joins and cross joins",
+              "Subqueries and correlated subqueries",
+              "CTEs and recursive CTEs"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Advanced SQL",
+            "description": "Use SQL for analysis and application workloads.",
+            "topics": [
+              "Window functions",
+              "ROW_NUMBER, RANK and DENSE_RANK",
+              "LAG and LEAD",
+              "Views and materialized views",
+              "Stored procedures and functions",
+              "Triggers and when to avoid them",
+              "Transactions and ACID",
+              "Isolation levels",
+              "Locks and deadlocks",
+              "EXPLAIN and ANALYZE"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "DB2 · PostgreSQL internals & operations",
+        "focus": "Operate a database under real workload.",
+        "modules": [
+          {
+            "title": "Storage, indexing & execution",
+            "description": "Understand why some queries are fast or slow.",
+            "topics": [
+              "B-tree and B+tree mechanics",
+              "Heap tuples and clustered indexes",
+              "Hash indexes",
+              "GIN and GiST",
+              "BRIN for append-heavy data",
+              "WAL and checkpoints",
+              "Buffer cache concepts",
+              "Seq Scan, Index Scan and Index Only Scan",
+              "Bitmap Heap Scan",
+              "Nested Loop, Hash Join and Merge Join",
+              "work_mem and disk spills"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Administration & recovery",
+            "description": "Keep data recoverable and secure.",
+            "topics": [
+              "Installation and configuration",
+              "Roles, grants and authentication",
+              "Backups and restore validation",
+              "Point-in-time recovery",
+              "WAL archiving",
+              "Streaming replication",
+              "Synchronous versus asynchronous replication",
+              "Failover and replication lag",
+              "Vacuum and autovacuum",
+              "Database encryption",
+              "Connection pooling with PgBouncer"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Performance engineering",
+            "description": "Measure before tuning.",
+            "topics": [
+              "EXPLAIN (ANALYZE, BUFFERS)",
+              "Query plan diagnosis",
+              "Index selectivity and composite indexes",
+              "Slow query logs",
+              "Connection saturation",
+              "Pool sizing",
+              "Read replica routing",
+              "Load testing and baselines",
+              "Capacity planning"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "DB3 · NoSQL, cache & data access patterns",
+        "focus": "Choose storage based on access patterns.",
+        "modules": [
+          {
+            "title": "NoSQL models",
+            "description": "Understand the trade-offs of different data models.",
+            "topics": [
+              "Document databases and MongoDB",
+              "Key-value stores",
+              "Wide-column stores",
+              "Graph database concepts",
+              "DynamoDB partition and sort keys",
+              "Single-table design",
+              "Global Secondary Indexes",
+              "Sparse index projections",
+              "DynamoDB Streams and materialized views"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Redis & caching",
+            "description": "Use cache without silently corrupting correctness.",
+            "topics": [
+              "Cache-aside",
+              "Write-through",
+              "Write-behind",
+              "TTL and invalidation",
+              "Cache stampede mitigation",
+              "Distributed locks and leases",
+              "Probabilistic early expiration",
+              "Redis persistence and replication",
+              "Redis Streams and Pub/Sub",
+              "Eviction policies: LRU and LFU"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Managed cloud database services",
+            "description": "Map use cases to cloud-native data products.",
+            "topics": [
+              "RDS and Aurora",
+              "DynamoDB",
+              "Cloud SQL and AlloyDB",
+              "Cloud Spanner and Firestore",
+              "Azure SQL Database",
+              "Azure Cosmos DB consistency levels",
+              "BigQuery and analytical stores",
+              "ElastiCache / Memorystore / Azure cache patterns"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "DB4 · Distributed databases",
+        "focus": "Understand data across nodes and regions.",
+        "modules": [
+          {
+            "title": "Consistency & replication",
+            "description": "Make consistency choices explicit.",
+            "topics": [
+              "CAP theorem",
+              "PACELC theorem",
+              "Linearizability and serializability",
+              "Strong versus eventual consistency",
+              "Synchronous and asynchronous replication",
+              "Read-after-write behavior",
+              "Quorum reads and writes",
+              "Replication lag and stale reads",
+              "Leader election concepts"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Partitioning & distributed transactions",
+            "description": "Scale beyond one database instance.",
+            "topics": [
+              "Declarative range, list and hash partitioning",
+              "Horizontal sharding",
+              "Consistent hashing and virtual nodes",
+              "Rebalancing and hot partitions",
+              "Two-phase commit",
+              "Saga pattern",
+              "Distributed locks",
+              "CDC and change streams",
+              "Event sourcing",
+              "OLTP versus OLAP"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Data platform concepts",
+            "description": "Connect application data to analytics platforms.",
+            "topics": [
+              "Data warehouses and data lakes",
+              "Lakehouse concepts",
+              "Batch and streaming ingestion",
+              "Data quality and lineage",
+              "Data governance",
+              "Data residency",
+              "Materialized views",
+              "Data lifecycle and retention"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "DB5 · Enterprise database projects",
+        "focus": "Prove you can migrate, isolate and recover data.",
+        "modules": [
+          {
+            "title": "Tenant migration & pooling engine",
+            "description": "Build a safe multi-tenant database control plane.",
+            "topics": [
+              "Tenant schema isolation",
+              "Migration orchestration across hundreds of tenants",
+              "Advisory locks to prevent concurrent migration",
+              "Expand-and-contract zero-downtime changes",
+              "Per-tenant connection quotas",
+              "Primary and read-replica routing",
+              "Connection proxy or PgBouncer controller",
+              "Migration audit and rollback plan"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Recovery & architecture proof",
+            "description": "Make the database failure plan testable.",
+            "topics": [
+              "Automated backup verification",
+              "PITR restore exercise",
+              "Replica promotion test",
+              "Failover and failback runbook",
+              "RPO and RTO targets",
+              "Load test and query benchmark",
+              "Data integrity checks",
+              "Architecture decision record"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cs",
+    "title": "Computer Science & Software Architecture",
+    "short": "DSA · design patterns · distributed systems",
+    "area": "Engineering foundations",
+    "level": "Core → Advanced",
+    "time": "10–16 weeks",
+    "description": "Build the problem-solving and architecture foundations used in cloud platforms, control planes, schedulers, data systems and technical interviews.",
+    "outcome": "Explain complexity, choose structures deliberately and design distributed services around failure and trade-offs.",
+    "stages": [
+      {
+        "title": "CS1 · Data structures & algorithms",
+        "focus": "Learn the structures behind common infrastructure systems.",
+        "modules": [
+          {
+            "title": "Complexity & linear structures",
+            "description": "Analyze time and memory costs.",
+            "topics": [
+              "Big O, Big Theta and Big Omega",
+              "Time versus space complexity",
+              "Arrays and strings",
+              "Hash maps and hash sets",
+              "Collision handling",
+              "Linked lists: singly and doubly",
+              "Stacks and monotonic stacks",
+              "Queues, deque and circular queues",
+              "Two pointers and sliding window",
+              "Prefix sums"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Search, sort & trees",
+            "description": "Understand canonical algorithmic building blocks.",
+            "topics": [
+              "Linear and binary search",
+              "Sorting: insertion, merge, quick and heap",
+              "Binary trees and BSTs",
+              "Tree traversals",
+              "Heaps and priority queues",
+              "Tries and radix trees",
+              "LRU and LFU structures",
+              "Union-find / disjoint sets"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Graphs & optimization",
+            "description": "Model dependencies and routes.",
+            "topics": [
+              "Graph representations",
+              "BFS and DFS",
+              "Topological sorting",
+              "Cycle detection",
+              "Dijkstra shortest path",
+              "Minimum spanning tree concepts",
+              "Greedy algorithms",
+              "Recursion and backtracking",
+              "Dynamic programming: memoization and tabulation"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Infrastructure algorithm patterns",
+            "description": "Connect algorithm theory to operating systems and cloud.",
+            "topics": [
+              "DAG dependency resolution",
+              "Consistent hashing and hash rings",
+              "CIDR longest-prefix-match tries",
+              "Token bucket and sliding-window rate limits",
+              "Bloom filters",
+              "Timer wheels and scheduling queues",
+              "Cache eviction structures",
+              "Load-balancing simulation"
+            ],
+            "lab": "Implement a dependency DAG resolver, consistent-hash ring and token-bucket limiter; benchmark and document complexity.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "CS2 · Software engineering practices",
+        "focus": "Build software that teams can safely change.",
+        "modules": [
+          {
+            "title": "Engineering workflow",
+            "description": "Use disciplined team delivery practices.",
+            "topics": [
+              "SDLC and requirements",
+              "Agile, Scrum and Kanban",
+              "Git fundamentals",
+              "Branching, merge and rebase",
+              "Cherry-pick and conflict resolution",
+              "Pull requests and code reviews",
+              "Semantic versioning",
+              "Dependency management",
+              "Technical documentation"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Testing & maintainability",
+            "description": "Design code to be testable and maintainable.",
+            "topics": [
+              "Unit, integration and end-to-end testing",
+              "Test-driven development",
+              "Mocks, fakes and contract tests",
+              "Clean code and refactoring",
+              "SOLID principles",
+              "DRY and KISS",
+              "Separation of concerns",
+              "Design patterns",
+              "Static analysis and code quality",
+              "Release discipline"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Application architecture",
+            "description": "Choose appropriate boundaries and interaction styles.",
+            "topics": [
+              "Monolith and modular monolith",
+              "Layered architecture",
+              "Microservices",
+              "Event-driven architecture",
+              "Serverless architecture",
+              "REST and GraphQL",
+              "gRPC and message queues",
+              "Pub/Sub and API gateways",
+              "Service discovery",
+              "Hexagonal architecture and DDD"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "CS3 · Distributed systems",
+        "focus": "Design for partial failure, concurrency and scale.",
+        "modules": [
+          {
+            "title": "Distributed systems foundations",
+            "description": "Understand why distributed programs behave differently.",
+            "topics": [
+              "Network partitions and partial failures",
+              "Latency and timeouts",
+              "Failure detection",
+              "Clock and ordering concepts",
+              "Leader election",
+              "Consensus concepts",
+              "Replication and sharding",
+              "Consistency models",
+              "Availability and fault tolerance"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Reliable communication patterns",
+            "description": "Make asynchronous work safe and observable.",
+            "topics": [
+              "At-most-once and at-least-once delivery",
+              "Exactly-once processing limitations",
+              "Idempotent consumers",
+              "Retries and exponential backoff",
+              "Circuit breakers and bulkheads",
+              "Rate limiting and backpressure",
+              "Queue management",
+              "Dead-letter queues",
+              "Outbox pattern",
+              "Saga and compensation"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "System design fluency",
+            "description": "Design systems from requirements to operations.",
+            "topics": [
+              "Functional requirements",
+              "Non-functional requirements",
+              "Traffic and capacity estimation",
+              "API and data model design",
+              "Caching and partitioning",
+              "Horizontal scaling",
+              "Failure domains",
+              "Observability and operations",
+              "Security and cost trade-offs",
+              "Architecture decision records"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "devops",
+    "title": "DevOps & Platform Engineering",
+    "short": "Git · CI/CD · Docker · Kubernetes · IaC",
+    "area": "Platform engineering",
+    "level": "Core → Expert",
+    "time": "12–18 weeks",
+    "description": "Build a repeatable path from source code to a secure, observable production deployment. Treat infrastructure as software and clusters as platforms.",
+    "outcome": "Deliver reproducible environments through code, policy, pipelines and GitOps—not manual console clicks.",
+    "stages": [
+      {
+        "title": "D1 · Version control & delivery foundations",
+        "focus": "Create a reliable source-of-truth workflow.",
+        "modules": [
+          {
+            "title": "Git collaboration",
+            "description": "Work effectively in shared repositories.",
+            "topics": [
+              "Git object model and commits",
+              "Branches and merge strategies",
+              "Rebase and cherry-pick",
+              "Conflict resolution",
+              "Pull requests and code reviews",
+              "Trunk-based development",
+              "GitFlow trade-offs",
+              "Tags and semantic versioning",
+              "GitOps principles"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "CI/CD foundations",
+            "description": "Automate the path from commit to deploy.",
+            "topics": [
+              "Pipeline stages and runners",
+              "Build and dependency caching",
+              "Unit and integration tests",
+              "Artifact repositories",
+              "Environment promotion",
+              "Release approvals",
+              "Rollback strategies",
+              "Blue-green deployments",
+              "Canary and rolling deployments",
+              "Pipeline observability"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Pipeline platforms",
+            "description": "Operate at least two platforms deeply.",
+            "topics": [
+              "GitHub Actions",
+              "GitLab CI/CD",
+              "Jenkins",
+              "Azure DevOps Pipelines",
+              "AWS CodePipeline",
+              "Google Cloud Build",
+              "Reusable workflows and templates",
+              "OIDC federation for cloud auth",
+              "Zero long-lived CI secrets"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "D2 · Docker & container internals",
+        "focus": "Package applications securely and efficiently.",
+        "modules": [
+          {
+            "title": "Container fundamentals",
+            "description": "Understand image and container lifecycle.",
+            "topics": [
+              "Containers versus virtual machines",
+              "Namespaces and cgroups",
+              "Images and layers",
+              "Dockerfile instructions",
+              "Build, run and inspect",
+              "Volumes and bind mounts",
+              "Bridge and host networking",
+              "Docker Compose",
+              "Registry operations"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Production container engineering",
+            "description": "Reduce image size and attack surface.",
+            "topics": [
+              "Multi-stage builds",
+              "Minimal and distroless images",
+              "Non-root user",
+              "Read-only root filesystem",
+              "Capabilities and seccomp concepts",
+              "Health checks and signal handling",
+              "Image scanning with Trivy or Grype",
+              "SBOM generation with Syft",
+              "Image signing with Cosign",
+              "Digest pinning and provenance"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "D3 · Kubernetes core",
+        "focus": "Operate the control plane and common workload types.",
+        "modules": [
+          {
+            "title": "Cluster architecture",
+            "description": "Understand the components and reconciliation loop.",
+            "topics": [
+              "Control plane and data plane",
+              "kube-apiserver",
+              "etcd and Raft concepts",
+              "Scheduler and controller manager",
+              "kubelet and containerd",
+              "Nodes, namespaces and labels",
+              "API objects and declarative desired state",
+              "CRDs and operators"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Workloads, config & storage",
+            "description": "Run stateful and stateless applications.",
+            "topics": [
+              "Pods and ReplicaSets",
+              "Deployments and rollout history",
+              "StatefulSets and DaemonSets",
+              "Jobs and CronJobs",
+              "ConfigMaps and Secrets",
+              "PersistentVolumes and PVCs",
+              "StorageClasses and CSI",
+              "Requests and limits",
+              "QoS classes"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Networking & ingress",
+            "description": "Expose and isolate cluster workloads.",
+            "topics": [
+              "ClusterIP, NodePort and LoadBalancer",
+              "Ingress controller concepts",
+              "Gateway API",
+              "CoreDNS and service discovery",
+              "CNI architecture",
+              "NetworkPolicy",
+              "Service accounts and RBAC",
+              "Ingress TLS and cert-manager"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Reliability & scheduling",
+            "description": "Keep workloads healthy during disruption.",
+            "topics": [
+              "Startup, liveness and readiness probes",
+              "PodDisruptionBudgets",
+              "Topology spread constraints",
+              "Affinity and anti-affinity",
+              "HPA and VPA",
+              "Cluster autoscaling",
+              "KEDA event-driven autoscaling",
+              "Karpenter node provisioning",
+              "Rolling updates and rollback"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "D4 · Kubernetes platform engineering",
+        "focus": "Move from cluster operator to platform engineer.",
+        "modules": [
+          {
+            "title": "Packaging & fleet management",
+            "description": "Make cluster state reusable and reviewable.",
+            "topics": [
+              "Helm charts and values",
+              "Kustomize overlays",
+              "Operators and controllers",
+              "Multi-cluster patterns",
+              "Cluster upgrades",
+              "etcd snapshot and recovery",
+              "Policy admission",
+              "Kyverno and OPA Gatekeeper",
+              "Pod Security Standards"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Service mesh & advanced networking",
+            "description": "Secure and manage service-to-service traffic.",
+            "topics": [
+              "Istio sidecar and ambient concepts",
+              "Cilium networking and service mesh",
+              "mTLS between services",
+              "L7 traffic splitting",
+              "Circuit breaking and outlier detection",
+              "Fault injection",
+              "Envoy proxy architecture",
+              "Cross-cluster connectivity"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "GitOps with Argo CD",
+            "description": "Make Git the deployment control plane.",
+            "topics": [
+              "Argo CD architecture",
+              "Application and App-of-Apps patterns",
+              "ApplicationSet generators",
+              "Sync waves and health checks",
+              "Helm and Kustomize source",
+              "Drift detection and self-heal",
+              "Progressive delivery with Argo Rollouts",
+              "Canary and blue/green analysis",
+              "Automated rollback"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "D5 · Infrastructure as Code & configuration",
+        "focus": "Provision safely, repeatedly and with reviewable change.",
+        "modules": [
+          {
+            "title": "Terraform / OpenTofu fundamentals",
+            "description": "Model cloud resources as code.",
+            "topics": [
+              "Providers and versions",
+              "Resources and data sources",
+              "Variables, locals and outputs",
+              "Dependency graph",
+              "State and state refresh",
+              "Remote state backends",
+              "State locking",
+              "Workspaces and environment separation",
+              "Import and moved blocks",
+              "Drift detection and lifecycle rules"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Module and policy engineering",
+            "description": "Build reusable, governed infrastructure.",
+            "topics": [
+              "Module interfaces and composition",
+              "Semantic versioning",
+              "Private module registries",
+              "Input validation",
+              "Testing infrastructure modules",
+              "State split by blast radius",
+              "OPA and Conftest",
+              "Checkov and tfsec",
+              "Policy gates in pull requests"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Production provisioning standards",
+            "description": "Manage identity, secrets and immutable hosts.",
+            "topics": [
+              "Encrypted backend and object versioning",
+              "S3 native state lock or backend lock",
+              "GCS state and versioning",
+              "Azure Blob lease locking",
+              "Packer golden images",
+              "Ansible provisioning",
+              "CIS hardening concepts",
+              "Secrets integration",
+              "OIDC from CI to cloud IAM",
+              "Plan review and approval"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Configuration & release management",
+            "description": "Complete the delivery chain.",
+            "topics": [
+              "Ansible inventories and playbooks",
+              "Roles and collections",
+              "Idempotency",
+              "Packer image pipelines",
+              "Artifact repositories",
+              "Promotion between environments",
+              "Release metadata and provenance",
+              "Change records and rollback"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "D6 · Secure production delivery",
+        "focus": "Put guardrails and evidence into the software supply chain.",
+        "modules": [
+          {
+            "title": "Supply-chain security",
+            "description": "Protect source, build, artifact and deploy stages.",
+            "topics": [
+              "Dependency and license scanning",
+              "SAST and secret scanning",
+              "Container vulnerability scanning",
+              "SBOM and provenance",
+              "Cosign signatures",
+              "Admission policy verification",
+              "Least-privilege build identities",
+              "OIDC and short-lived credentials",
+              "Audit trail and artifact retention"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Platform engineering outcome",
+            "description": "Build a self-service delivery platform.",
+            "topics": [
+              "Golden-path templates",
+              "Reusable deployment workflows",
+              "Environment provisioning API",
+              "Developer portal concepts",
+              "Policy-as-code guardrails",
+              "Observability defaults",
+              "Service catalog and ownership",
+              "Platform SLO and adoption metrics"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aws",
+    "title": "Amazon Web Services",
+    "short": "IAM · VPC · compute · data · enterprise",
+    "area": "Cloud platform",
+    "level": "Beginner → Expert",
+    "time": "12–16 weeks",
+    "description": "Go deep on one primary cloud first. AWS provides a broad foundation in identity, networking, compute, storage, data, governance and enterprise operations.",
+    "outcome": "Design, provision, secure and operate AWS workloads across accounts, regions and failure domains.",
+    "stages": [
+      {
+        "title": "AWS1 · Cloud fundamentals",
+        "focus": "Learn the global model and shared responsibility.",
+        "modules": [
+          {
+            "title": "Cloud concepts & economics",
+            "description": "Understand the service and operating model.",
+            "topics": [
+              "IaaS, PaaS and SaaS",
+              "Public, private and hybrid cloud",
+              "Shared responsibility model",
+              "Regions, Availability Zones and edge locations",
+              "Elasticity and scalability",
+              "High availability and fault tolerance",
+              "Disaster recovery concepts",
+              "Pay-as-you-go pricing",
+              "Support plans and service quotas"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "AWS account & identity basics",
+            "description": "Build the identity mental model early.",
+            "topics": [
+              "AWS accounts and root user protections",
+              "IAM users, groups, roles and policies",
+              "Policy evaluation logic",
+              "STS and temporary credentials",
+              "Least privilege",
+              "MFA",
+              "CLI profiles and credential providers",
+              "CloudTrail activity basics"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "AWS2 · Core services",
+        "focus": "Know the primitives, limitations and pricing levers.",
+        "modules": [
+          {
+            "title": "Compute & application",
+            "description": "Select compute according to workload shape.",
+            "topics": [
+              "EC2 instances and AMIs",
+              "Auto Scaling Groups",
+              "Placement groups",
+              "Spot, Reserved and Savings Plans",
+              "Lambda and concurrency",
+              "ECS and Fargate",
+              "EKS architecture",
+              "API Gateway",
+              "Step Functions",
+              "EventBridge"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Storage & data",
+            "description": "Choose storage and data services based on access patterns.",
+            "topics": [
+              "S3 classes, versioning and lifecycle",
+              "EBS volumes and snapshots",
+              "EFS and FSx",
+              "Glacier storage classes",
+              "RDS and Aurora",
+              "DynamoDB",
+              "ElastiCache",
+              "Backup and restore",
+              "Encryption with KMS"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Networking & edge",
+            "description": "Understand traffic paths and boundaries.",
+            "topics": [
+              "VPC and subnet design",
+              "Route tables, IGW and NAT",
+              "Security groups and NACLs",
+              "ALB, NLB and GWLB",
+              "Route 53 routing",
+              "CloudFront",
+              "VPC endpoints and PrivateLink",
+              "WAF and Shield",
+              "VPC Flow Logs"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Operations & messaging",
+            "description": "Wire systems together and inspect them.",
+            "topics": [
+              "CloudWatch metrics, logs and alarms",
+              "CloudTrail",
+              "AWS Config",
+              "SQS and SNS",
+              "EventBridge routing",
+              "Secrets Manager",
+              "Systems Manager",
+              "KMS key policy concepts",
+              "Service quotas"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "AWS3 · Network & hybrid infrastructure",
+        "focus": "Design network foundations that support many teams.",
+        "modules": [
+          {
+            "title": "VPC engineering",
+            "description": "Design production-ready VPC layouts.",
+            "topics": [
+              "Multi-AZ VPC architecture",
+              "Public, private and isolated subnets",
+              "Route-table segmentation",
+              "NAT gateway and egress patterns",
+              "VPC peering",
+              "Transit Gateway",
+              "VPC endpoints",
+              "PrivateLink",
+              "Centralized network inspection"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Hybrid and global connectivity",
+            "description": "Connect cloud and on-premises networks.",
+            "topics": [
+              "Site-to-site VPN",
+              "Direct Connect",
+              "BGP route exchange",
+              "Route 53 Resolver",
+              "Private hosted zones",
+              "Network Firewall",
+              "Network ACL and security group strategy",
+              "Multi-region connectivity",
+              "Network monitoring and troubleshooting"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "AWS4 · Advanced compute & data architecture",
+        "focus": "Build resilient application architectures.",
+        "modules": [
+          {
+            "title": "Compute patterns",
+            "description": "Match orchestration and serverless to the workload.",
+            "topics": [
+              "EC2 advanced configuration",
+              "Auto Scaling policies",
+              "Lambda event sources",
+              "Lambda concurrency and throttling",
+              "ECS and EKS trade-offs",
+              "Fargate",
+              "Event-driven architecture",
+              "API Gateway integration",
+              "Step Functions orchestration"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Data patterns",
+            "description": "Choose transactional and analytical data systems.",
+            "topics": [
+              "RDS versus Aurora",
+              "DynamoDB key design",
+              "Single-table modeling",
+              "DynamoDB Streams",
+              "Read replicas",
+              "S3 data lakes",
+              "Athena query patterns",
+              "Backup policies",
+              "Cross-region replication",
+              "Cache-aside and write-through"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "AWS5 · Security & governance",
+        "focus": "Move from single account to governed organization.",
+        "modules": [
+          {
+            "title": "Identity at enterprise scale",
+            "description": "Constrain access across accounts and teams.",
+            "topics": [
+              "Cross-account roles",
+              "IAM Identity Center",
+              "Organizations and OUs",
+              "Service Control Policies",
+              "Resource Control Policies concepts",
+              "Federated workforce identity",
+              "Workload identity",
+              "Permission boundaries",
+              "Break-glass access"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Security posture & compliance",
+            "description": "Centralize evidence and security response.",
+            "topics": [
+              "Control Tower and landing zones",
+              "AWS Config rules",
+              "Security Hub",
+              "GuardDuty",
+              "Inspector",
+              "Macie",
+              "KMS and CloudHSM concepts",
+              "Certificate Manager",
+              "WAF and Shield Advanced",
+              "Centralized logs and incident response"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "AWS6 · Enterprise architecture & proof",
+        "focus": "Design whole organizations, not isolated resources.",
+        "modules": [
+          {
+            "title": "Enterprise architecture",
+            "description": "Design shared services and workload boundaries.",
+            "topics": [
+              "Multi-account landing zones",
+              "Account vending and OU design",
+              "Shared networking and DNS",
+              "Centralized identity",
+              "Centralized observability",
+              "Secure workload isolation",
+              "Multi-environment deployment",
+              "Tagging and cost allocation",
+              "Enterprise backup strategy"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Migration, resilience & optimization",
+            "description": "Operate through change and failure.",
+            "topics": [
+              "Application migration assessment",
+              "Migration waves and cutover",
+              "Hybrid cloud integration",
+              "Multi-region application architecture",
+              "RTO and RPO",
+              "Disaster recovery patterns",
+              "Capacity and quota planning",
+              "Cost governance",
+              "Architecture reviews and ADRs"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "AWS portfolio builds",
+            "description": "Produce evidence beyond certification.",
+            "topics": [
+              "Three-tier app: Route 53 → CloudFront → ALB → EC2 → RDS",
+              "Serverless app: API Gateway, Lambda, DynamoDB and SQS",
+              "Production EKS with Terraform, Helm and autoscaling",
+              "Multi-account landing zone",
+              "Multi-region disaster recovery environment",
+              "Automated backup and restore drill"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gcp",
+    "title": "Google Cloud Platform",
+    "short": "Resource hierarchy · GKE · data · platform",
+    "area": "Cloud platform",
+    "level": "Intermediate → Expert",
+    "time": "8–12 weeks",
+    "description": "Transfer your cloud fundamentals to Google Cloud, with particular depth in global networking, GKE, Cloud Run, analytics and organization governance.",
+    "outcome": "Build and operate GCP environments with sound project hierarchy, workload identity, data and Kubernetes practices.",
+    "stages": [
+      {
+        "title": "GCP1 · Fundamentals & hierarchy",
+        "focus": "Learn how Google Cloud organizes and bills resources.",
+        "modules": [
+          {
+            "title": "Organization model",
+            "description": "Create the correct resource boundaries.",
+            "topics": [
+              "Global infrastructure, regions and zones",
+              "Organizations, folders and projects",
+              "Resource hierarchy",
+              "Billing accounts and budgets",
+              "Labels and quotas",
+              "Organization policies",
+              "APIs and service enablement"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Identity & tooling",
+            "description": "Use short-lived identities and automation.",
+            "topics": [
+              "Cloud IAM roles and bindings",
+              "Service accounts",
+              "Workload Identity Federation",
+              "gcloud CLI",
+              "Cloud Shell",
+              "Application Default Credentials",
+              "IAM Conditions",
+              "Audit logs"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "GCP2 · Core services",
+        "focus": "Map the core platform to real workload needs.",
+        "modules": [
+          {
+            "title": "Compute, containers & storage",
+            "description": "Deploy workloads with the right abstraction.",
+            "topics": [
+              "Compute Engine",
+              "Managed Instance Groups",
+              "GKE",
+              "Cloud Run",
+              "Cloud Functions",
+              "Cloud Storage",
+              "Persistent Disk and Hyperdisk",
+              "Artifact Registry",
+              "Cloud Build"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Data, messaging & operations",
+            "description": "Understand transactional and analytical services.",
+            "topics": [
+              "Cloud SQL",
+              "AlloyDB",
+              "Spanner",
+              "Firestore",
+              "BigQuery",
+              "Pub/Sub",
+              "Workflows",
+              "Cloud KMS and Secret Manager",
+              "Cloud Monitoring and Logging",
+              "Security Command Center"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "GCP3 · Network engineering",
+        "focus": "Design global VPC and hybrid connectivity.",
+        "modules": [
+          {
+            "title": "VPC & traffic",
+            "description": "Use global network scope deliberately.",
+            "topics": [
+              "Global VPC and regional subnets",
+              "Shared VPC",
+              "VPC peering",
+              "Cloud Router",
+              "Cloud NAT",
+              "Firewall rules",
+              "Hierarchical firewall policies",
+              "Internal and external load balancing",
+              "Cloud DNS"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Private & hybrid connectivity",
+            "description": "Connect private environments reliably.",
+            "topics": [
+              "Cloud VPN",
+              "Cloud Interconnect",
+              "Private Google Access",
+              "Private Service Connect",
+              "Network Connectivity Center",
+              "Hybrid cloud connectivity",
+              "Multi-region networking",
+              "Flow logs and troubleshooting"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "GCP4 · GKE & platform engineering",
+        "focus": "Operate Kubernetes with GCP-native identity and fleet controls.",
+        "modules": [
+          {
+            "title": "GKE operations",
+            "description": "Build secure, upgradeable clusters.",
+            "topics": [
+              "GKE architecture",
+              "Standard versus Autopilot",
+              "Node pools",
+              "Workload Identity Federation",
+              "GKE networking and security",
+              "Cluster and workload autoscaling",
+              "Binary Authorization",
+              "Fleet management",
+              "Multi-cluster architecture"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Delivery & policy",
+            "description": "Build a governed delivery platform.",
+            "topics": [
+              "Artifact Registry",
+              "Cloud Build",
+              "Cloud Deploy",
+              "Config Sync",
+              "Policy Controller",
+              "Service mesh concepts",
+              "Kubernetes policy",
+              "Cluster upgrades and release channels",
+              "Observability integration"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "GCP5 · Data & analytics engineering",
+        "focus": "Use the data platform for batch and streaming workloads.",
+        "modules": [
+          {
+            "title": "Analytics platform",
+            "description": "Design warehouse and lake patterns.",
+            "topics": [
+              "BigQuery architecture and SQL",
+              "Partitioning and clustering",
+              "BigLake",
+              "Cloud Storage data lakes",
+              "Dataplex and governance",
+              "Data quality",
+              "Dataform",
+              "Analytics cost optimization"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Data pipelines",
+            "description": "Process events and batch workloads.",
+            "topics": [
+              "Pub/Sub streaming",
+              "Dataflow",
+              "Dataproc",
+              "Data Fusion",
+              "Cloud Composer",
+              "Batch versus streaming",
+              "Data warehouse design",
+              "Lineage and observability"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "GCP6 · Enterprise architecture",
+        "focus": "Create scalable, governed organization platforms.",
+        "modules": [
+          {
+            "title": "Enterprise design",
+            "description": "Build shared foundations and controls.",
+            "topics": [
+              "Organization design and landing zones",
+              "Shared VPC architecture",
+              "IAM federation",
+              "Centralized security",
+              "Organization policies",
+              "Hybrid cloud",
+              "Multi-region deployments",
+              "GKE platform architecture",
+              "BigQuery enterprise architecture"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Resilience & optimization",
+            "description": "Plan recovery and operating cost.",
+            "topics": [
+              "Disaster recovery",
+              "Data residency",
+              "Cost governance",
+              "Cloud operations",
+              "Migration planning",
+              "Enterprise observability",
+              "Project and quota governance",
+              "Architecture decision records"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "GCP portfolio builds",
+            "description": "Demonstrate practical fluency.",
+            "topics": [
+              "Three-tier app on Compute Engine",
+              "Cloud Run serverless service",
+              "Production GKE platform",
+              "BigQuery analytics platform",
+              "Pub/Sub and Dataflow streaming pipeline",
+              "Enterprise landing zone",
+              "Shared VPC hybrid design",
+              "Multi-region high-availability architecture"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "azure",
+    "title": "Microsoft Azure",
+    "short": "Entra ID · VNet · AKS · governance",
+    "area": "Cloud platform",
+    "level": "Intermediate → Expert",
+    "time": "8–12 weeks",
+    "description": "Learn Azure deeply enough to work in Microsoft-centric enterprise environments, hybrid identity estates and governed landing zones.",
+    "outcome": "Design secure Azure subscriptions, networks, identity, AKS platforms and recovery strategies.",
+    "stages": [
+      {
+        "title": "AZ1 · Fundamentals & hierarchy",
+        "focus": "Understand Azure's organization and control plane.",
+        "modules": [
+          {
+            "title": "Azure resource model",
+            "description": "Organize resources for ownership and policy.",
+            "topics": [
+              "Azure global infrastructure",
+              "Regions and availability zones",
+              "Management groups",
+              "Subscriptions and resource groups",
+              "Azure Resource Manager",
+              "Azure Portal and Cloud Shell",
+              "Azure CLI and PowerShell",
+              "Azure Policy and resource locks",
+              "Cost Management and budgets"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Identity basics",
+            "description": "Build the identity mental model.",
+            "topics": [
+              "Microsoft Entra ID",
+              "Users and groups",
+              "Service principals",
+              "Managed identities",
+              "Azure RBAC",
+              "MFA concepts",
+              "Conditional Access overview",
+              "Audit and sign-in logs"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "AZ2 · Core services",
+        "focus": "Know the core platform services and use cases.",
+        "modules": [
+          {
+            "title": "Compute, containers & storage",
+            "description": "Choose a hosting model.",
+            "topics": [
+              "Azure Virtual Machines",
+              "VM Scale Sets",
+              "AKS",
+              "Container Apps",
+              "Azure Functions",
+              "Blob Storage",
+              "Azure Files",
+              "Managed Disks",
+              "Azure Container Registry"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Data & application delivery",
+            "description": "Connect applications and data services.",
+            "topics": [
+              "Azure SQL Database",
+              "Azure Database for PostgreSQL",
+              "Cosmos DB",
+              "Azure Load Balancer",
+              "Application Gateway",
+              "Azure Front Door",
+              "Azure DNS",
+              "Key Vault",
+              "Azure Monitor and Log Analytics"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "AZ3 · Enterprise networking",
+        "focus": "Build hybrid and private connectivity.",
+        "modules": [
+          {
+            "title": "VNet engineering",
+            "description": "Design subnets and policy boundaries.",
+            "topics": [
+              "Virtual networks and subnetting",
+              "Network Security Groups",
+              "Application Security Groups",
+              "Route tables",
+              "Azure Firewall",
+              "NAT Gateway",
+              "VNet peering",
+              "Private Endpoints and Private Link",
+              "Private DNS"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Hybrid and global traffic",
+            "description": "Connect data centers and regions.",
+            "topics": [
+              "VPN Gateway",
+              "ExpressRoute",
+              "Hub-and-spoke architecture",
+              "Virtual WAN",
+              "Application Gateway",
+              "Azure Front Door",
+              "Traffic Manager",
+              "DDoS Protection",
+              "Network Watcher",
+              "Hybrid networking diagnostics"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "AZ4 · Identity & security architecture",
+        "focus": "Apply identity-first controls across the enterprise.",
+        "modules": [
+          {
+            "title": "Advanced Entra ID",
+            "description": "Govern human and workload identity.",
+            "topics": [
+              "Conditional Access",
+              "MFA and authentication strength",
+              "Privileged Identity Management",
+              "Managed identities",
+              "Workload identity",
+              "Service principals and app registrations",
+              "Cross-tenant federation",
+              "Break-glass accounts"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Security posture & compliance",
+            "description": "Create defensible guardrails.",
+            "topics": [
+              "Azure RBAC scope",
+              "Azure Policy initiatives",
+              "Management group governance",
+              "Key Vault and secret rotation",
+              "Defender for Cloud",
+              "Microsoft Sentinel",
+              "Zero Trust architecture",
+              "Compliance architecture",
+              "Security posture management"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "AZ5 · DevOps, AKS & delivery",
+        "focus": "Build and release secure workloads.",
+        "modules": [
+          {
+            "title": "Azure delivery ecosystem",
+            "description": "Automate source, build and deploy.",
+            "topics": [
+              "Azure DevOps and Repos",
+              "Azure Pipelines",
+              "GitHub Actions",
+              "Azure Artifacts",
+              "Release automation",
+              "Environment approvals",
+              "Workload identity in pipelines",
+              "OIDC federation"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "AKS platform engineering",
+            "description": "Operate Kubernetes on Azure.",
+            "topics": [
+              "AKS architecture",
+              "AKS networking",
+              "AKS security",
+              "Workload identity",
+              "Helm and GitOps",
+              "Argo CD and Flux",
+              "Container Apps",
+              "Azure Functions",
+              "Bicep and Terraform",
+              "Cluster upgrades and monitoring"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "AZ6 · Enterprise architecture & proof",
+        "focus": "Design governed Azure foundations.",
+        "modules": [
+          {
+            "title": "Enterprise-scale landing zones",
+            "description": "Structure large Azure estates.",
+            "topics": [
+              "Management group hierarchy",
+              "Subscription design",
+              "Enterprise identity",
+              "Hybrid Active Directory integration",
+              "Hub-and-spoke and Virtual WAN",
+              "Centralized policy and logging",
+              "Platform and workload subscriptions",
+              "Resource naming and tagging"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Continuity & migration",
+            "description": "Design for failure, compliance and change.",
+            "topics": [
+              "Multi-region applications",
+              "Azure SQL high availability",
+              "Azure Site Recovery",
+              "Azure Backup",
+              "Business continuity",
+              "Disaster recovery",
+              "Enterprise migration",
+              "Cost management",
+              "Centralized monitoring",
+              "Platform engineering"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Azure portfolio builds",
+            "description": "Show applied Azure capability.",
+            "topics": [
+              "Three-tier web application",
+              "Hub-and-spoke network",
+              "Secure AKS cluster",
+              "Terraform and Bicep deployment",
+              "Enterprise identity design",
+              "Azure landing zone",
+              "Centralized logging and SIEM",
+              "ExpressRoute hybrid architecture",
+              "Multi-region recovery environment"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sre",
+    "title": "Site Reliability Engineering",
+    "short": "SLI · SLO · observability · incidents",
+    "area": "Reliability",
+    "level": "Intermediate → Expert",
+    "time": "8–12 weeks",
+    "description": "SRE is the engineering discipline of operating reliable distributed systems—not simply installing dashboards or monitoring servers.",
+    "outcome": "Define measurable service objectives, reduce toil, respond to incidents and prove recovery through tests.",
+    "stages": [
+      {
+        "title": "SRE1 · Reliability foundations",
+        "focus": "Measure user-visible reliability and set priorities.",
+        "modules": [
+          {
+            "title": "Service reliability model",
+            "description": "Use shared definitions across engineering teams.",
+            "topics": [
+              "Availability and reliability",
+              "Latency and throughput",
+              "Traffic and error rates",
+              "Saturation",
+              "SLI, SLO and SLA",
+              "Error budgets",
+              "Golden signals",
+              "RED and USE methods",
+              "Toil and automation"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "SLO design",
+            "description": "Make targets measurable and meaningful.",
+            "topics": [
+              "Good events versus valid events",
+              "Availability SLI calculation",
+              "Latency SLI percentiles",
+              "Rolling measurement windows",
+              "99%, 99.9% and 99.99% budgets",
+              "Error budget policy",
+              "Multi-window burn-rate alerting",
+              "SLO review and ownership"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "SRE2 · Observability engineering",
+        "focus": "Correlate metrics, logs and traces across service boundaries.",
+        "modules": [
+          {
+            "title": "Metrics & alerting",
+            "description": "Measure behavior and alert on actionable symptoms.",
+            "topics": [
+              "Prometheus metric types",
+              "PromQL foundations",
+              "Grafana dashboards",
+              "Thanos and Mimir concepts",
+              "Alertmanager",
+              "Cardinality and label design",
+              "Metric instrumentation",
+              "Golden signal dashboards"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Logs & traces",
+            "description": "Follow a request across distributed components.",
+            "topics": [
+              "Structured JSON logging",
+              "Log aggregation with Loki or OpenSearch",
+              "Trace and span concepts",
+              "OpenTelemetry SDK",
+              "OTLP export and collector",
+              "Grafana Tempo or Jaeger",
+              "trace_id and span_id correlation",
+              "W3C trace context propagation",
+              "Sampling strategies"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Cloud and cluster observability",
+            "description": "Instrument infrastructure and managed platforms.",
+            "topics": [
+              "CloudWatch",
+              "Google Cloud Monitoring and Logging",
+              "Azure Monitor and Log Analytics",
+              "Kubernetes metrics",
+              "Node and control-plane signals",
+              "Kafka consumer lag",
+              "Database performance metrics",
+              "Synthetic probes"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "SRE3 · Production operations",
+        "focus": "Respond to incidents and keep services safe to change.",
+        "modules": [
+          {
+            "title": "Incident response",
+            "description": "Create calm, repeatable operations.",
+            "topics": [
+              "Severity and incident roles",
+              "On-call readiness",
+              "Triage and mitigation",
+              "Communication updates",
+              "Escalation paths",
+              "Runbooks and playbooks",
+              "Blameless postmortems",
+              "Five Whys and contributing factors",
+              "Remediation ownership"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Reliability patterns",
+            "description": "Reduce blast radius and handle overload.",
+            "topics": [
+              "Retries and exponential backoff",
+              "Timeout budgets",
+              "Circuit breakers",
+              "Bulkheads",
+              "Load shedding",
+              "Graceful degradation",
+              "Backpressure",
+              "Queue depth and lag",
+              "Capacity planning",
+              "Autoscaling validation"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Resilience & chaos",
+            "description": "Prove systems recover rather than assuming they will.",
+            "topics": [
+              "High availability and fault tolerance",
+              "Failure domains and AZ loss",
+              "Chaos Mesh and LitmusChaos concepts",
+              "Cloud fault injection",
+              "Pod and node disruption tests",
+              "DNS latency and packet loss scenarios",
+              "Disk I/O saturation",
+              "Canary analysis and rollback",
+              "Recovery time measurement"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "SRE4 · Reliability capstone",
+        "focus": "Turn operational data into an engineering improvement loop.",
+        "modules": [
+          {
+            "title": "SRE implementation",
+            "description": "Design and ship an observable service.",
+            "topics": [
+              "Define service-level indicators",
+              "Set an explicit SLO and error budget",
+              "Instrument metrics, logs and traces",
+              "Create actionable multi-burn-rate alerts",
+              "Write incident runbooks",
+              "Conduct a failure injection exercise",
+              "Document the postmortem",
+              "Track toil reduction and remediation"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "security",
+    "title": "Cloud Security & Governance",
+    "short": "Identity · Zero Trust · policy · compliance",
+    "area": "Security & governance",
+    "level": "Core → Expert",
+    "time": "8–12 weeks",
+    "description": "Security is an engineering discipline woven into identity, network, workload, data, delivery and organizational governance.",
+    "outcome": "Design least-privilege systems with measurable controls, auditability and defensible recovery.",
+    "stages": [
+      {
+        "title": "SEC1 · Security foundations",
+        "focus": "Understand threat boundaries and shared responsibility.",
+        "modules": [
+          {
+            "title": "Core security model",
+            "description": "Use security vocabulary accurately.",
+            "topics": [
+              "Confidentiality, integrity and availability",
+              "Threat, vulnerability and risk",
+              "Shared responsibility by service model",
+              "Threat modeling",
+              "Attack surface and trust boundaries",
+              "Least privilege",
+              "Defense in depth",
+              "Secure defaults",
+              "Security logging"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Identity and access",
+            "description": "Treat identity as the control plane.",
+            "topics": [
+              "Authentication and authorization",
+              "IAM policy evaluation",
+              "Role-based access control",
+              "Attribute-based access concepts",
+              "Federation and OIDC",
+              "OAuth 2.0 and token lifetimes",
+              "MFA and privileged access",
+              "Service identities and workload identity",
+              "Secrets rotation"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "SEC2 · Network, workload & data protection",
+        "focus": "Protect traffic, hosts and information.",
+        "modules": [
+          {
+            "title": "Network security",
+            "description": "Segment and inspect traffic.",
+            "topics": [
+              "Network segmentation",
+              "Security groups and firewall policy",
+              "Private endpoints",
+              "TLS and mTLS",
+              "WAF and DDoS protection",
+              "Zero Trust network access",
+              "East-west and north-south traffic",
+              "DNS security",
+              "Central egress inspection"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Workload and container security",
+            "description": "Reduce runtime and supply-chain exposure.",
+            "topics": [
+              "Hardened host images",
+              "Container image scanning",
+              "Non-root containers",
+              "Read-only filesystems",
+              "Capabilities and seccomp",
+              "Kubernetes RBAC",
+              "NetworkPolicy default deny",
+              "Admission policies",
+              "SBOM and artifact signing"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Data security",
+            "description": "Protect sensitive data through its lifecycle.",
+            "topics": [
+              "Encryption at rest and in transit",
+              "KMS key lifecycle",
+              "Secrets management",
+              "Key rotation",
+              "Data classification",
+              "Backup encryption",
+              "Retention and deletion",
+              "Data residency",
+              "Audit trails"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "SEC3 · Governance & compliance",
+        "focus": "Scale controls across accounts, projects and subscriptions.",
+        "modules": [
+          {
+            "title": "Cloud governance",
+            "description": "Implement organization-wide guardrails.",
+            "topics": [
+              "AWS Organizations and Control Tower",
+              "GCP organization policy",
+              "Azure management groups and policy",
+              "Landing zone standards",
+              "Tagging and naming policies",
+              "Policy as Code",
+              "Centralized audit logging",
+              "Guardrail exception process"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Security operations & assurance",
+            "description": "Collect evidence and respond to findings.",
+            "topics": [
+              "Cloud security posture management",
+              "Security Hub and GuardDuty",
+              "Security Command Center",
+              "Defender for Cloud",
+              "Microsoft Sentinel",
+              "Vulnerability management",
+              "Incident response lifecycle",
+              "Compliance control mapping",
+              "Risk registers and audit evidence"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "SEC4 · Security architecture project",
+        "focus": "Make the controls reviewable and testable.",
+        "modules": [
+          {
+            "title": "Enterprise security deliverable",
+            "description": "Document and validate an end-to-end control model.",
+            "topics": [
+              "Threat model and trust boundaries",
+              "Identity architecture diagram",
+              "Network segmentation diagram",
+              "Key and secret lifecycle",
+              "Policy-as-code checks in CI",
+              "Central audit pipeline",
+              "Detection and response runbook",
+              "Security exceptions and compensating controls"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "architecture",
+    "title": "Enterprise Cloud Architecture",
+    "short": "Landing zones · migrations · resilience · FinOps",
+    "area": "Architecture",
+    "level": "Advanced → Principal",
+    "time": "12–20 weeks + experience",
+    "description": "Grow from implementing infrastructure to making organization-wide architecture decisions. Seniority requires production ownership, migration experience, design reviews and technical leadership.",
+    "outcome": "Produce defensible HLDs and LLDs that balance business requirements, risk, reliability, security, operations and cost.",
+    "stages": [
+      {
+        "title": "EA1 · Architecture practice",
+        "focus": "Translate business needs into technical decisions.",
+        "modules": [
+          {
+            "title": "Enterprise architecture fundamentals",
+            "description": "Understand the organization as a system.",
+            "topics": [
+              "Architecture principles and standards",
+              "Business capability mapping",
+              "Functional and non-functional requirements",
+              "Domain and application boundaries",
+              "HLD and LLD",
+              "C4 and deployment diagrams",
+              "Sequence and data-flow diagrams",
+              "Architecture Decision Records",
+              "Risk registers and assumptions"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Quality attributes & trade-offs",
+            "description": "Make architectural consequences explicit.",
+            "topics": [
+              "Availability and durability",
+              "Latency and throughput",
+              "Scalability and elasticity",
+              "Security and compliance",
+              "Maintainability and operability",
+              "Portability and lock-in",
+              "Cost and unit economics",
+              "Resilience and recoverability",
+              "Build versus buy analysis"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "EA2 · Cloud strategy & landing zones",
+        "focus": "Build the platform foundations used by many teams.",
+        "modules": [
+          {
+            "title": "Cloud adoption strategy",
+            "description": "Connect platform architecture to business goals.",
+            "topics": [
+              "Cloud strategy and operating model",
+              "Workload portfolio assessment",
+              "Cloud-native versus hybrid choices",
+              "Organization and account structure",
+              "Landing zone architecture",
+              "Shared services and platform teams",
+              "Identity and network foundations",
+              "Governance guardrails",
+              "Operating model and RACI"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Platform standards",
+            "description": "Create repeatable engineering guardrails.",
+            "topics": [
+              "Reusable infrastructure modules",
+              "Golden paths and self-service",
+              "Policy as Code",
+              "Centralized observability",
+              "Secrets and certificate standards",
+              "Environment strategy",
+              "Naming and tagging",
+              "Service catalog and ownership",
+              "Platform SLOs"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "EA3 · Migration & modernization",
+        "focus": "Move workloads safely with a reversible plan.",
+        "modules": [
+          {
+            "title": "Migration assessment",
+            "description": "Understand the current estate before changing it.",
+            "topics": [
+              "Application discovery",
+              "Dependency mapping",
+              "Data classification",
+              "Performance and capacity baselines",
+              "Migration 6R strategies",
+              "Business impact analysis",
+              "Target-state selection",
+              "Migration wave planning"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Migration execution",
+            "description": "Design cutover, rollback and modernization.",
+            "topics": [
+              "Network and identity integration",
+              "Data migration and replication",
+              "Change Data Capture",
+              "Strangler pattern",
+              "Zero-downtime schema migration",
+              "Cutover and rollback plans",
+              "Validation and reconciliation",
+              "Post-migration optimization",
+              "Migration risk register"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "EA4 · Resilience & disaster recovery",
+        "focus": "Design for regional and service-level failures.",
+        "modules": [
+          {
+            "title": "Availability architecture",
+            "description": "Choose redundancy based on business impact.",
+            "topics": [
+              "High availability versus fault tolerance",
+              "Business continuity",
+              "RTO and RPO",
+              "Multi-AZ design",
+              "Multi-region patterns",
+              "Active-active and active-passive",
+              "Pilot light and warm standby",
+              "Global traffic routing",
+              "Health-check design"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Recovery engineering",
+            "description": "Prove recovery through rehearsals.",
+            "topics": [
+              "Backup strategies and immutability",
+              "Replication and consistency",
+              "Failover and failback",
+              "Recovery orchestration",
+              "Data restore validation",
+              "Regional outage exercises",
+              "DR testing cadence",
+              "Recovery evidence and runbooks"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "EA5 · FinOps & capacity architecture",
+        "focus": "Make cost, performance and business value first-class.",
+        "modules": [
+          {
+            "title": "FinOps foundations",
+            "description": "Connect cloud bills to ownership and value.",
+            "topics": [
+              "Cloud cost models",
+              "Resource tagging and allocation",
+              "Budgets and forecasting",
+              "Chargeback and showback",
+              "Unit economics",
+              "Cost per customer and transaction",
+              "Cost anomaly detection",
+              "FinOps governance"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Optimization & capacity",
+            "description": "Optimize without damaging reliability.",
+            "topics": [
+              "Rightsizing and utilization",
+              "Idle-resource elimination",
+              "Autoscaling efficiency",
+              "Storage lifecycle policies",
+              "Network egress costs",
+              "Reserved capacity and savings plans",
+              "Commitment discount strategy",
+              "Capacity and quota planning",
+              "Cost-aware architecture reviews"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "EA6 · Leadership & architecture governance",
+        "focus": "Lead decisions across teams and time horizons.",
+        "modules": [
+          {
+            "title": "Technical leadership",
+            "description": "Influence without relying on title.",
+            "topics": [
+              "Technical communication",
+              "Stakeholder management",
+              "Architecture presentations",
+              "Requirements gathering",
+              "Mentoring engineers",
+              "Design reviews",
+              "Technical debt management",
+              "Cross-team collaboration",
+              "Vendor evaluation",
+              "Engineering standards"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Architecture documentation pack",
+            "description": "Produce artifacts used by real delivery teams.",
+            "topics": [
+              "HLD and LLD",
+              "Architecture and network diagrams",
+              "Threat model",
+              "Migration plan",
+              "Capacity plan",
+              "Disaster recovery plan",
+              "Cost estimate and bill of materials",
+              "Architecture Decision Records",
+              "Operational runbooks",
+              "Non-functional requirements and risk register"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "multicloud",
+    "title": "Multi-Cloud & Hybrid Architecture",
+    "short": "AWS ↔ GCP ↔ Azure · portability · governance",
+    "area": "Architecture",
+    "level": "Advanced → Principal",
+    "time": "8–12 weeks",
+    "description": "Learn to compare platforms and design cross-cloud systems deliberately. Multi-cloud is a business and resilience decision—not a requirement to deploy every workload everywhere.",
+    "outcome": "Explain service equivalents, identity boundaries, connectivity, observability, data portability and multi-cloud trade-offs.",
+    "stages": [
+      {
+        "title": "MC1 · Provider comparison",
+        "focus": "Understand where cloud primitives align and differ.",
+        "modules": [
+          {
+            "title": "Service equivalence map",
+            "description": "Compare services by capability, not just by name.",
+            "topics": [
+              "EC2 / Compute Engine / Azure VMs",
+              "EKS / GKE / AKS",
+              "S3 / Cloud Storage / Blob Storage",
+              "RDS-Aurora / Cloud SQL / Azure SQL",
+              "DynamoDB / Firestore / Cosmos DB",
+              "Lambda / Cloud Run / Azure Functions",
+              "IAM / Cloud IAM / Entra ID and RBAC",
+              "VPC / VPC / VNet",
+              "Route 53 / Cloud DNS / Azure DNS",
+              "CloudWatch / Cloud Monitoring / Azure Monitor"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Architecture differences",
+            "description": "Know the boundaries that change your design.",
+            "topics": [
+              "AWS accounts as blast-radius boundaries",
+              "GCP organization, folder and project hierarchy",
+              "Azure management groups, subscriptions and resource groups",
+              "Regional versus global networking",
+              "Service quota and policy differences",
+              "Identity federation differences",
+              "Storage and data transfer costs",
+              "Managed-service portability limits"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "MC2 · Portability & shared platforms",
+        "focus": "Separate portable layers from provider-specific services.",
+        "modules": [
+          {
+            "title": "Workload portability",
+            "description": "Choose what should be portable.",
+            "topics": [
+              "Cloud-native versus cloud-agnostic design",
+              "Kubernetes workload portability",
+              "Terraform multi-provider patterns",
+              "Container and artifact portability",
+              "Service abstraction boundaries",
+              "Managed database lock-in",
+              "Data portability and egress",
+              "Portable observability with OpenTelemetry"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Cross-cloud identity & governance",
+            "description": "Use federated identity and consistent controls.",
+            "topics": [
+              "OIDC workload identity federation",
+              "Avoiding static cloud access keys",
+              "Central identity and authorization model",
+              "Secrets across cloud boundaries",
+              "Policy as Code",
+              "Resource inventory normalization",
+              "Audit log aggregation",
+              "Control ownership and exceptions"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "MC3 · Connectivity & operations",
+        "focus": "Operate systems that span providers and locations.",
+        "modules": [
+          {
+            "title": "Cross-cloud connectivity",
+            "description": "Connect networks with clear routing and trust.",
+            "topics": [
+              "VPN and private connectivity",
+              "BGP route exchange",
+              "CIDR planning and overlap",
+              "DNS resolution across environments",
+              "Cross-cloud load balancing",
+              "Service-to-service authentication",
+              "Network segmentation",
+              "Latency and egress design"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Shared operations",
+            "description": "Make the operational experience consistent.",
+            "topics": [
+              "Centralized metrics, logs and traces",
+              "OpenTelemetry collector topology",
+              "Cross-cloud incident correlation",
+              "Common SLO definitions",
+              "Backup and recovery boundaries",
+              "Configuration and policy drift",
+              "FinOps across providers",
+              "Vendor lock-in review"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "MC4 · Multi-cloud capstones",
+        "focus": "Demonstrate the architecture with measurable tests.",
+        "modules": [
+          {
+            "title": "Cross-cloud architecture review",
+            "description": "Decide when multi-cloud is justified.",
+            "topics": [
+              "Business driver and failure scenario",
+              "Single-cloud baseline comparison",
+              "Dependency and data consistency analysis",
+              "Operational complexity estimate",
+              "Security and compliance assessment",
+              "Egress and latency model",
+              "Failure-domain design",
+              "Decision record with alternatives"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Multi-cloud implementation",
+            "description": "Deliver the advanced failover platform.",
+            "topics": [
+              "AWS VPC and EKS foundation",
+              "Azure VNet and AKS foundation",
+              "Private cross-cloud connectivity",
+              "GitOps synchronization",
+              "Federated workload identity",
+              "External Secrets integration",
+              "Global health-checked routing",
+              "Automated failover validation",
+              "RTO and RPO measurement"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "portfolio",
+    "title": "Portfolio, Capstones & Interview Readiness",
+    "short": "Projects · evidence · system design · career",
+    "area": "Career execution",
+    "level": "Applied → Senior",
+    "time": "Continuous",
+    "description": "Turn knowledge into engineering evidence. Every serious project should explain the problem, design, security, cost, operations, failure behavior and verification—not only contain source code.",
+    "outcome": "Build a portfolio that shows end-to-end ownership and communicate trade-offs clearly in technical interviews.",
+    "stages": [
+      {
+        "title": "PF1 · Project ladder",
+        "focus": "Build from foundational systems to enterprise platforms.",
+        "modules": [
+          {
+            "title": "Foundational engineering projects",
+            "description": "Prove the core engineering loop.",
+            "topics": [
+              "Linux system-monitoring CLI",
+              "Python cloud resource inventory",
+              "Automated log analysis and alerting",
+              "Three-tier cloud application",
+              "PostgreSQL backup and recovery",
+              "URL shortener with caching",
+              "Task scheduler using a priority queue"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Platform & reliability projects",
+            "description": "Demonstrate deployment and operations.",
+            "topics": [
+              "Terraform infrastructure deployment",
+              "Dockerized service with CI/CD",
+              "Production Kubernetes application",
+              "Argo CD GitOps environment",
+              "Enterprise observability platform",
+              "Cloud security and compliance dashboard",
+              "Multi-cloud FinOps platform"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Enterprise architecture projects",
+            "description": "Demonstrate senior-level system thinking.",
+            "topics": [
+              "Enterprise landing zone",
+              "Multi-region disaster recovery",
+              "Hybrid cloud architecture",
+              "Enterprise migration project",
+              "Internal developer platform",
+              "Multi-cloud active-active or failover platform",
+              "Real-time financial telemetry and fraud engine"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "PF2 · Advanced capstone specifications",
+        "focus": "Use the source blueprint's two deep technical builds.",
+        "modules": [
+          {
+            "title": "Capstone A · Multi-cloud failover",
+            "description": "Prove a controlled regional failover design.",
+            "topics": [
+              "AWS EKS and Azure AKS environment model",
+              "Terraform or OpenTofu modules for both cloud foundations",
+              "Three-zone network segmentation and CIDR planning",
+              "Cross-cloud private connectivity with BGP / IPsec or an encrypted overlay",
+              "Argo CD multi-cluster ApplicationSet synchronization",
+              "Federated workload identity and External Secrets integration",
+              "CockroachDB quorum or Aurora Global plus outbox design",
+              "Database replication, consistency and quorum behavior",
+              "Route 53 deep readiness checks and global traffic routing",
+              "Controlled regional ingress-loss simulation in an isolated lab",
+              "k6 traffic verification during failover",
+              "Automated recovery and failback drill",
+              "Measured RTO, RPO and data integrity"
+            ],
+            "lab": "Build the multi-cloud topology in isolated environments, then exercise a controlled regional failure. Record health-check behavior, client impact, database consistency and recovery evidence.",
+            "gate": "Show the architecture decision record, security model, dependency map and an observed failover result. State the test assumptions; do not claim zero data loss unless you measured and validated it."
+          },
+          {
+            "title": "Capstone B · Financial telemetry engine",
+            "description": "Prove event-driven processing and observability.",
+            "topics": [
+              "gRPC ingestion and Protobuf schema",
+              "Idempotency key design and duplicate-request handling",
+              "Kafka or Kinesis streaming backbone",
+              "Producer durability, acknowledgements and idempotence",
+              "Partitioning by account or merchant for ordered events",
+              "Consumer groups, rebalancing and lag",
+              "Ledger persistence and transaction integrity",
+              "Sliding-window velocity and anomaly processing",
+              "Redis risk-score cache and dead-letter queue",
+              "Trace context propagation across stream records",
+              "P95/P99 latency, throughput and saturation testing",
+              "Replay, poison-message and recovery behavior"
+            ],
+            "lab": "Load-test a controlled event stream, inject duplicate and malformed messages, and observe the ledger, consumer lag, DLQ and trace chain.",
+            "gate": "Demonstrate idempotent processing, explain ordering guarantees and limits, and publish measured throughput and latency with test methodology."
+          }
+        ]
+      },
+      {
+        "title": "PF3 · Engineering proof & documentation",
+        "focus": "Make the work independently reviewable.",
+        "modules": [
+          {
+            "title": "Project quality bar",
+            "description": "Every repository should tell a complete engineering story.",
+            "topics": [
+              "Problem statement and business requirements",
+              "Architecture diagram and rationale",
+              "HLD and LLD",
+              "Infrastructure as Code",
+              "Application source code",
+              "Automated CI/CD pipeline",
+              "Security controls and threat model",
+              "Monitoring, logs and traces",
+              "Automated tests and coverage",
+              "Cost estimate",
+              "Failure scenarios and recovery",
+              "Deployment and troubleshooting guide",
+              "Architecture Decision Records",
+              "Lessons learned and next steps"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Evidence and impact",
+            "description": "Present measurable outcomes honestly.",
+            "topics": [
+              "Load-test methodology and baseline",
+              "Latency and throughput results",
+              "Availability and recovery evidence",
+              "Cost and utilization comparison",
+              "Security scan and policy evidence",
+              "CI quality gates",
+              "Operational runbook demonstration",
+              "Trade-off analysis",
+              "Short architecture walkthrough video",
+              "Engineering blog or design note"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "PF4 · Interview preparation",
+        "focus": "Practice explaining fundamentals and architecture decisions.",
+        "modules": [
+          {
+            "title": "Technical fundamentals",
+            "description": "Be ready to debug and explain core concepts.",
+            "topics": [
+              "Linux processes, memory, permissions and logs",
+              "TCP, DNS, subnetting, NAT, routing and VPN",
+              "Python functions, OOP, APIs and testing",
+              "JavaScript async, Node.js and event loop",
+              "SQL joins, indexes and transactions",
+              "DSA arrays, hashing, trees, graphs and complexity",
+              "Docker image layers, network and storage",
+              "Kubernetes scheduling, networking and troubleshooting",
+              "Terraform state, modules and drift",
+              "CI/CD testing, rollback and deployment"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "System design scenarios",
+            "description": "Design common global systems from first principles.",
+            "topics": [
+              "Design YouTube or Netflix",
+              "Design an e-commerce platform",
+              "Design a banking transaction system",
+              "Design a global payment platform",
+              "Design a URL shortener",
+              "Design a global notification service",
+              "Design a multi-tenant SaaS application",
+              "Design a globally distributed database",
+              "Design a multi-region DR platform",
+              "Design an enterprise landing zone",
+              "Design a secure hybrid cloud",
+              "Design an internal developer platform",
+              "Design a multi-cloud monitoring system"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Architecture answer framework",
+            "description": "Make the reasoning visible in every answer.",
+            "topics": [
+              "Clarify functional requirements",
+              "Define non-functional requirements",
+              "Estimate traffic and scale",
+              "Draw network and trust boundaries",
+              "Choose compute and storage",
+              "Design the data model",
+              "Explain security and identity",
+              "Set availability and recovery targets",
+              "Describe operations and monitoring",
+              "Estimate cost and identify trade-offs",
+              "Compare alternatives and defend the decision"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      },
+      {
+        "title": "PF5 · Career progression & job execution",
+        "focus": "Apply when you can demonstrate the target role—not when a timer expires.",
+        "modules": [
+          {
+            "title": "Role readiness checkpoints",
+            "description": "Use evidence to choose the next role.",
+            "topics": [
+              "Junior cloud: Linux, networking, AWS core, IAM and scripting",
+              "Junior DevOps: Git, Docker, CI/CD, Terraform and deployment",
+              "Junior SRE: Linux troubleshooting, metrics, alerts and incident basics",
+              "Cloud engineer: independently build and operate production-like systems",
+              "Senior engineer: own reliability, security, cost and cross-team delivery",
+              "Architect: lead design, migration, governance and trade-off decisions"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          },
+          {
+            "title": "Career operating system",
+            "description": "Prepare a durable professional story.",
+            "topics": [
+              "Metric-driven resume bullets",
+              "Architecture portfolio index",
+              "Clear project walkthroughs",
+              "Incident and troubleshooting stories",
+              "Trade-off and failure examples",
+              "Technical communication practice",
+              "Mentoring and review examples",
+              "Stakeholder and business context",
+              "Continuous learning plan"
+            ],
+            "lab": "Write a short lab note: what you built, what failed, and how you verified the result.",
+            "gate": "Explain the design, implement it without copying a tutorial, and troubleshoot one realistic failure."
+          }
+        ]
+      }
+    ]
+  }
+]

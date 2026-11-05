@@ -1,2 +1,0 @@
-/** @type {import('tailwindcss').Config} */
-export default { content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'], theme: { extend: { colors: { ink:'#0b0d0f', panel:'#121518', card:'#171b1e', lime:'#b6f36b' }, fontFamily: { display:['Space Grotesk','sans-serif'], sans:['DM Sans','sans-serif'], mono:['DM Mono','monospace'] } } }, plugins: [] }
