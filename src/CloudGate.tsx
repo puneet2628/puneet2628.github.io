@@ -13,8 +13,8 @@ const SESSION_KEY = "cloudgate.demo.unlocked";
 const PBKDF2_ITERATIONS = 600_000;
 
 // Replace these with the values from a fresh, correctly generated hash pair.
-const ACCESS_SALT_B64 = "o7K0az4eCBuAaPJIAEuPsDzAGS7EyhUyfaSK8NEXc5g=";
-const ACCESS_HASH_B64 = "vNiovRN6vSppDwnR6KJgBLjHKo5hvmvdfaee5RI/G44=";
+const ACCESS_SALT_B64 = "XGtMq8dkVNuTmmpf0uvhHGfhN+edfM3dK0iFx/451Dw=";
+const ACCESS_HASH_B64 = "jxeyfuVkFB3jkjLxoRk7rmK+mGF+ag6sNJmttePxB8g=";
 
 function fromBase64(value: string): Uint8Array {
   const binary = atob(value);
